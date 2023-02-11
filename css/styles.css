@@ -1,3 +1,7 @@
+body {
+    font-family: 'Prompt', sans-serif;
+}
+
 .wrapper {
     list-style: none;
     
@@ -7,7 +11,13 @@
     align-items: center;
 
 }
+ul {
+    padding: 0;
+}
 
 .wrapper li a {
     text-decoration: none;
+}
+h3 {
+    text-align: center;
 }
