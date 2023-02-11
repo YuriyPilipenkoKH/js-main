@@ -224,4 +224,26 @@ function XO(str) {
     //  return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length;
 }
 // console.log(XO("ooxx"));
-console.log(XO("ooxXm"));
+// console.log(XO("ooxXm"));
+
+//===================================
+//  
+function maps(x){
+ return x.map( el => el *2)
+}
+// console.log(maps([1, 2, 3]));
+
+//===================================
+// 
+function litres(time) {
+    return Math.floor(time *0.5 )
+  }
+//   console.log(litres(3));
+
+  //===================================
+// sum in binary parseInt(number / 2)
+
+function addBinary(a,b) {
+return parseInt((a+b) / 2)
+}
+console.log(addBinary(2,2) );
