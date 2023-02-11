@@ -1,0 +1,13 @@
+.wrapper {
+    list-style: none;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+
+}
+
+.wrapper li a {
+    text-decoration: none;
+}
