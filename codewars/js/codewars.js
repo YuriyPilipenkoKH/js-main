@@ -244,6 +244,37 @@ function litres(time) {
 // sum in binary parseInt(number / 2)
 
 function addBinary(a,b) {
-return parseInt((a+b) / 2)
+
+    return  Number((a+b >>> 0).toString(2));
+    //-----------------------------------
+    //return (a+b).toString(2)
 }
-console.log(addBinary(2,2) );
+// console.log(addBinary(51,12) );
+//===================================
+// 9  007  199  254  740  992  BigInt  2 ** 53
+//           4  294  967  296  Number  2 ** 32
+//===================================
+
+function dec2Bin(dec) {
+    return (dec >>> 0).toString(2);
+  }
+
+console.log( dec2Bin(-5));
+console.log( dec2Bin(5));
+
+//===================================
+
+// window['ref'].style.background = 'red';
+// ref.hidden = true
+
+//===================================
+
+let div = document.createElement('div');
+  div.className = "alert";
+  div.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
+
+  document.body.append(div);
+  setTimeout(() => div.remove(), 10000);
+
+  //===================================
+
