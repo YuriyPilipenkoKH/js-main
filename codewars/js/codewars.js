@@ -259,8 +259,8 @@ function dec2Bin(dec) {
     return (dec >>> 0).toString(2);
   }
 
-console.log( dec2Bin(-5));
-console.log( dec2Bin(5));
+// console.log( dec2Bin(-5));
+// console.log( dec2Bin(5));
 
 //===================================
 
@@ -269,12 +269,113 @@ console.log( dec2Bin(5));
 
 //===================================
 
-let div = document.createElement('div');
-  div.className = "alert";
-  div.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
+// let div = document.createElement('div');
+//   div.className = "alert";
+//   div.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
 
-  document.body.append(div);
-  setTimeout(() => div.remove(), 10000);
+//   document.body.append(div);
+//   setTimeout(() => div.remove(), 10000);
 
   //===================================
+//validate for digits only
+//   var alphanum=/^[0-9a-bA-B]+$/; //This contains A to Z , 0 to 9 and A to B
+// if(usrid.value.match(alphanum)){
+// return true;
+ 
+
+function validatePIN (pin) {
+  // console.log(typeof(pin));
+if (typeof(pin) === 'number') {
+  
+  if( pin.toString().length == 4 || pin.toString().length == 6) {
+    return true
+  } return false
+}return false
+
+}
+// console.log(validatePIN(0000));
+  //===================================
+  //You get an array of numbers, return the sum of all of the positives ones.
+
+  function positiveSum(arr) {
+let res = 0
+return arr.reduce(function(sum, current) {
+  if (current > 0) {
+   res =  sum + current;
+  }
+  return res
+}, 0);
+  }
+  // console.log(positiveSum([1,-4,7,12])); 
+//===================================================
+
+function simpleMultiplication(number) {
+  if(number % 2 === 0) {
+    return number*8
+  } return number*9
+  // return n % 2 == 0 ? n * 8 : n * 9
+}
+// console.log(simpleMultiplication(5));
+
+//===================================================
+
+function solution(str){
+  // return str.split('').reverse().join('')
+  return  [...str]
+}
+// console.log(solution('fight'));
+
+//===================================================
+
+const stringToNumber = function(str){
+  // put your code here
+  return Number(str)
+}
+
+// console.log(stringToNumber("1405"));
+
+//===================================================
+//There is a bus moving in the city which 
+//takes and drops some people at each bus stop.
+
+var number = function(busStops){
+const test = busStops.flatMap(n => n)
+const ins = test.filter((number,id) => id % 2 === 0).reduce((acc,el) => acc + el, 0)
+const outs = test.filter((number,id) => id % 2 !== 0).reduce((acc,el) => acc + el, 0)
+
+return ins - outs
+} //const number = busStops => busStops.reduce((p,n) => p+n[0]-n[1],0)
+
+// console.log(number([[10,0],[3,5],[5,8]]))
+
+//===================================================
+//no space
+
+function noSpace(x){
+return x.split(' ').filter(el => el).join('')
+
+//   return x.replace(/\s/g, '');
+//   const noSpace = x => x.replace(/ /g, "");
+}
+// console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'));
+
+//===================================================
+//remove all of the vowels 
+
+function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, ''). replace()
+}
+
+// console.log(disemvowel("This website is for losers LOL!"));
+
+//===================================================
+//
+function smash (words) {
+  return words.join(' ')
+};
+// console.log(smash(['hello', 'world', 'this', 'is', 'great'] ));
+
+//===================================================
+// you're better than the average 
+//[41, 75, 72, 56, 80, 82, 81, 33]
 
