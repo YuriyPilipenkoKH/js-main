@@ -1,4 +1,5 @@
-console.log('level_01');
+
+console.log('codewars    level_01');
 
 //=================================================
 // each  character x2
@@ -67,3 +68,24 @@ return ( mpg * fuelLeft ) >= distanceToPump
   };
 //   console.log(zeroFuel(50, 25, 2));
 //   console.log(zeroFuel(100, 50, 1));
+
+//==========================================
+
+function SeriesSum(n){
+  const series = [1,0.25,0.14,0.10,0.08,0.06]
+    console.log(series);
+  const newseries =  series.slice(0,n)
+    console.log(newseries);
+
+return newseries.reduce((acc,el) => acc + el, 0).toFixed(2)
+}
+// console.log(SeriesSum(6));
+
+//==========================================
+
+function sumTwoSmallestNumbers(numbers) {  
+    return numbers.sort()
+    
+
+  }
+  console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
