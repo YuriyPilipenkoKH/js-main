@@ -95,3 +95,15 @@ function compareNumbers(a, b) {
     return a - b;
   }
   //==========================================
+//  remove the smallest value
+function removeSmallest(arr) {
+
+    const min = Math.min(...arr);
+    return arr.filter(e => e != min);
+  }
+// numbers.filter((_, idx) => idx !== numbers.indexOf(Math.min(...numbers)));
+//   console.log(removeSmallest([5, 3, 2, 7, 4]));
+
+  //==========================================
+
+  
