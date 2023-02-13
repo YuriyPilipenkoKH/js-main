@@ -379,3 +379,108 @@ function smash (words) {
 // you're better than the average 
 //[41, 75, 72, 56, 80, 82, 81, 33]
 
+function betterThanAverage(classPoints, yourPoints) {
+
+  const average = classPoints.reduce((acc, el) => acc + el, 0) / classPoints.length;
+console.log(average);
+return (average < yourPoints)
+? true
+: false
+}
+
+// console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9));
+//===================================================
+//return if number
+
+function filter_list(l) {
+  return l.filter(function(el) { return typeof el === 'number' })
+}
+// console.log(filter_list([1,5,3,2,'g,' ,'sd', 'd ']));
+
+//===================================================
+// bin 2 dec    from string
+
+const binaryArrayToNumber = arr => {
+
+  return parseInt( (arr.join('')), 2)
+};
+// console.log(binaryArrayToNumber([0,0,1,0]));
+
+//===================================================
+//  length of the shortest word
+
+function findShort(s){
+// const tod = s.split(' ').map((str, index) => ({ value: str, id: index + 1 }));
+// console.log(tod[0].value);
+
+const shortestWord = s.split(' ').reduce((a, b) => a.length <= b.length ? a : b)
+return shortestWord.length
+
+// return Math.min.apply(null, s.split(' ').map(w => w.length));
+// return Math.min(...s.split(" ").map (s => s.length));
+// return s.split(' ').sort((a, b) => a.length - b.length)[0].length || 0;
+// const findShort = (s) => s.split(' ').sort((a, b) => b.length - a.length).pop().length;
+}
+// console.log(findShort("Let's travel abroad shall we"));
+
+//===================================================
+
+var summation = function (num) {
+
+   let sum = 0
+   for (let i = 1; i <num+1; i += 1) {
+   sum = sum + i
+}
+return sum
+
+// return num * (num + 1) / 2
+// return (num > 1) ? num + summation(num - 1):num;
+}
+// console.log(summation(8));
+
+//===================================================
+// cockroach speed  Math.floor((kmph * centimetersInKilometers) / secsInHour)
+
+function cockroachSpeed(s) {
+ 
+ return Math.floor((s * 100000) / 3600)
+}
+// console.log(cockroachSpeed(1.08));
+
+//===================================================
+//   3 integer values a, b, c.
+// return true if a triangle can be built with the sides of given length
+
+function isTriangle(a,b,c) {
+  return (a+b > c && a+c > b && b+c > a) ? true : false
+  // Math.max(a,b,c)<(a+b+c)/2
+
+}
+// console.log(isTriangle(7,2,2));
+
+//===================================================
+// array of integers from n to 1
+
+function reverseSeq(n) {
+  const finArr = []
+  for (let i = n; i > 0; i-=1) {
+    finArr.push(i)
+  }
+  return finArr;
+};
+// console.log(reverseSeq(7));
+
+//===================================================
+// Return the number  of vowels    //   return str.replace(/[aeiou]/gi, ''). replace()
+
+function getCount(str) {
+  // return str.match(/[aeiou]/gi).length;
+  return (str.match(/[aeiou]/ig)||[]).length;
+}
+// console.log(getCount('abyraca dab yra'));
+
+//===================================================
+
+
+
+
