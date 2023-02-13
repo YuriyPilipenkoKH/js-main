@@ -27,3 +27,20 @@ ul, li, img  {
     color: #3c763d;
     background-color: #dff0d8;
   }
+
+  .main__list {
+ padding: 10px;
+  }
+
+.main__list li a{
+font-weight: 600 ;
+   }
+
+   .kyu {
+    padding: 4px 16px;
+    border: 4px solid orange;
+  
+    border-radius:20px;
+   }
+
+ 

@@ -480,7 +480,13 @@ function getCount(str) {
 // console.log(getCount('abyraca dab yra'));
 
 //===================================================
+// boolean
 
-
-
+function setAlarm(emp, vac){
+return emp && ! vac
+}
+// console.log(setAlarm(true, true));
+// console.log(setAlarm(false, true));
+// console.log(setAlarm(false, false));
+// console.log(setAlarm(true, false));
 
