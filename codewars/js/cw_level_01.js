@@ -82,10 +82,16 @@ return newseries.reduce((acc,el) => acc + el, 0).toFixed(2)
 // console.log(SeriesSum(6));
 
 //==========================================
-
+//
 function sumTwoSmallestNumbers(numbers) {  
-    return numbers.sort()
-    
-
+   const snumbers = numbers.sort(compareNumbers)
+   return snumbers[0] + snumbers[1]
+   //------------------------------------
+// numbers.sort((a,b) => a - b);
+   //return numbers[0] + numbers[1];
   }
-  console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
+//   console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
+function compareNumbers(a, b) {
+    return a - b;
+  }
+  //==========================================
