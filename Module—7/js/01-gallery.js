@@ -39,6 +39,6 @@ function onPhotoClick(e) {
         if (e.code === "Escape") {
             instance.close()
         }
-    });
+    },  );
 };
 

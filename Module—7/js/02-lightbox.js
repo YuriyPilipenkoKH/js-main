@@ -25,11 +25,11 @@ function createImageGallery(galleryItems) {
         }
        
     
-        imageGallery.addEventListener('keydown', (e) => {
+        imageGallery.addEventListener('keydown',   (e) => {
             if (e.code === "Escape") {
                 instance.close()
             }
-        });
+        } );
     };    
 
     const lightbox = new SimpleLightbox('.gallery a', { 

@@ -106,4 +106,84 @@ function removeSmallest(arr) {
 
   //==========================================
 
+  function stray(numbers) {
+
+    // return numbers.reduce((x, y) => x ^ y);
+    return numbers.reduce(function(x,y) {
+        console.log('x', x);
+        console.log('y', y);
+       
+      return x ^ y
+      }, );
+  }
+// console.log(stray( [17, 17, 3, 3, 3, 3, 17]));
+
+ //==========================================
+ function foon(num) {
+
+    // return numbers.reduce((x, y) => x ^ y);
+    return num.reduce(function(x,y) {
+        console.log('x', x);
+        console.log('y', y);   
+      return x + y
+      }, );
+  }
+// console.log(foon([2,3,4,2]));
+
+ //==========================================
+
+ function paperwork(n, m) {
   
+    return n < 0 || m < 0 ? 0  : (n * m)
+ }
+// console.log(paperwork(5,-5));
+
+ //==========================================
+
+ function rentalCarCost(d) {
+
+    return d < 3
+           ? d * 40  
+           : d < 7
+              ? (d * 40)- 20
+              : (d * 40)- 50 
+  }
+//  console.log(rentalCarCost(6));
+ //==========================================
+//to remove first and last element in array
+
+function sumArray(array) {
+
+return array.sort((a,b) => a - b).slice(1, -1).reduce((x, y) => x + y);
+}
+// console.log(sumArray([ 6, 2, 1, 8, 10 ]));
+
+ //==========================================
+//   average
+
+ function findAverage(arr) {
+
+ return (arr.length === 0) 
+    ? 0
+    : (arr.reduce((a, b) => a + b, 0) / arr.length);
+  }
+//   console.log(findAverage([1,2,3,4]));
+
+ //==========================================
+
+ function squareSum(numbers){
+    
+return  numbers.map(el => el ** 2).reduce((a, b) => a + b, 0)
+ }
+//  console.log(squareSum([0, 3, 4, 5]));
+
+ //==========================================
+
+ function duplicateCount(text){
+   
+return text.toLowerCase().split('').filter((e, i) => text.indexOf(e) !== i)//.filter((e, i) => text.indexOf(e) == i)//.length
+  }
+console.log(duplicateCount("aabbcde"));
+
+
+
