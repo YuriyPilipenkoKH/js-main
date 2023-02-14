@@ -1,5 +1,5 @@
 import { galleryItems } from './gallery-items.js';
-
+console.log('df');
 
 const imageGallery = document.querySelector('.gallery');
 

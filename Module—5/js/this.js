@@ -1,5 +1,5 @@
 console.log('[] === []', [] === []);
-console.log('{} === {}',{} === {});
+// console.log('{} === {}',{} === {});
 
 
 const user = {
@@ -46,7 +46,7 @@ const user1 = {
            return this.authors.includes(authorName)
         }
       };
-    //   console.table(bookShelf);
+      // console.table(bookShelf);
 
       const fun1 = function() {
         console.log('fun-1');

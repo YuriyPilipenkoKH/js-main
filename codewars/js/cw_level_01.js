@@ -113,10 +113,10 @@ function removeSmallest(arr) {
         console.log('x', x);
         console.log('y', y);
        
-      return x ^ y
-      }, );
+      return x ^  y
+      },);
   }
-// console.log(stray( [17, 17, 3, 3, 3, 3, 17]));
+// console.log(stray( [ 0, 0, 0.55, 0, 0 ]));
 
  //==========================================
  function foon(num) {
@@ -181,9 +181,167 @@ return  numbers.map(el => el ** 2).reduce((a, b) => a + b, 0)
 
  function duplicateCount(text){
    
-return text.toLowerCase().split('').filter((e, i) => text.indexOf(e) !== i)//.filter((e, i) => text.indexOf(e) == i)//.length
+    const obj = text.toLowerCase().split('').
+    reduce((count, item) => (count[item] = count[item] + 1 || 1, count), {});
+    //.filter((e, i) => text.indexOf(e) !== i)//.filter((e, i) => text.indexOf(e) == i)//.length
+
+    return Object.values(obj).filter(x => x > 1).length
+
+
+    // return text.reduce((count, item) => (count[item] = count[item] + 1 || 1, count), {});
   }
-console.log(duplicateCount("aabbcde"));
+// console.log(duplicateCount("aabbcde"));
+// console.log(duplicateCount("Indivisibility"));
+// console.log(duplicateCount("Indivisibilities"));
+
+ //==========================================
+
+ function greet (name, owner) {
+
+return name === owner
+      ? 'Hello boss'
+      : 'Hello guest'
+  }
+// console.log(greet('Daniel', 'Daniel'));
+// console.log(greet('Greg', 'Daniel'));
+
+ //==========================================
+
+ function findUniq(arr) {
+    const obj = arr.reduce((count, item) => (count[item] = count[item] + 1 || 1, count), {});
+    console.log(obj);
+    for(let key in obj){
+        if(obj[key] === 1) return Number(key);
+    }
+
+    //-----------------------------------------------------
+    // mekes array of unique elements
+    // return arr.filter((item, i, ar) => ar.indexOf(item) === i);
+    //-----------------------------------------------------
+    //  return arr.find(n => arr.indexOf(n) === arr.lastIndexOf(n));
+    //-----------------------------------------------------
+    }
+// console.log(findUniq([ 1, 0, 0 ]));
+// console.log(findUniq([ 0, 0, 0.55, 0, 0 ]));
+
+//===========================================
+function findUniq2(arr) {
+    let [a,b,c] = arr.slice(0,3);
+    if( a != b && a!=c ) return a;
+    for( let x of arr ) if( x!=a ) return x
+  }
+// console.log(findUniq2([0, 1, 0, 0 ]));
+//===========================================
+function findUniqs(arr) {
+    // const obj = arr.reduce((count, item) => (count[item] = count[item] + 1 || 1, count), {});
+    // console.log(obj);
+    // for(let key in obj){
+    //     if(obj[key] === 1) return key;
+    // }
+    //---------------------------------------------------------
+    
+   return arr.find(n => arr.indexOf(n) === arr.lastIndexOf(n));
+
+  }
+//   console.log(findUniqs([ 1, 1, 1, 2, 1, 1 ]));
+//   console.log(findUniqs([ 4, 4, 'foo', 4 ]));
+// console.log(findUniqs([ 'Aa', 'aaa', 'aaaaa', 'BbBb', 'Aaaa', 'AaAaAa', 'a' ]));
+//===========================================
+
+function arrayDiff(a, b) {
+
+// return a.filter(x => b.indexOf(x) == -1);
+//-------------------------------------
+//  return a.filter(e => !b.includes(e));
+//----------------------------------------
+
+const toRemove = new Set([...b]);
+return a.filter( x => !toRemove.has(x) );
+//-------------------------------------
+// b = new Set(b)
+// return a.filter(v => !b.has(v))
+//-------------------------------------
+
+}
+// console.log( arrayDiff([1,2,2,1], [1]));
+// console.log( arrayDiff([1,2,4,2,,4,1], [1,2]));
+
+//===========================================
+ //quater from month
+ const quarterOf = m => Math.ceil(m/3);
+
+//  console.log(quarterOf (4));
+ //===========================================
+
+ function duplicateEncode(word){
+// return word.replace(/./gi, '(');
+return word.split('')
+
+ }
+//  console.log(duplicateEncode("din"));
+//  console.log(duplicateEncode("Success"));
+
+ //===========================================
+var number=function(array){
+    return array.map((el,id) => `${id+1}: ${el}`)
+
+}
+// console.log(number(["a", "b", "c"]));
+
+ //===========================================
+
+ function printerError(s) {
+
+    let f= s.match(/[^a-m]/g).length;
+    return   s.match(/[^a-m]/g) === null
+              ?   `0/${s.length}` 
+              :    `${f}/${s.length}`
+//---------------------------------------
+// const printerError = s => `${s.replace(/[a-m]/gi, "").length}/${s.length}`;              
+
+ }
+// console.log(printerError("aaabbbbhaijjjm"));
+// console.log(printerError("aaaxbbbbyyhwawiwjjjwwm"));
+
+ //===========================================
+// remove each second el
+
+ function removeEveryOther(arr){
+return arr.filter((el,id) => id % 2 === 0)
+
+ }
+// console.log(removeEveryOther([4,5,1,7,2,6]));
+
+ //=========================================== 
+// A smiley face
+
+function countSmileys(arr) {
+// const fit = [':',';',')','D']
+
+// return arr.filter(el => el.includes(fit[0]))
+//-----------------------------------------
+// return arr.filter(x => /^[:;][-~]?[)D]$/.test(x)).length;
+//-----------------------------------------
+return arr.filter(v=>v.match(/(:|;)(-|~)?(\)|D)/)).length
+
+}
+// console.log(countSmileys([':D',':~)',';~D',':)',':$']));
+
+ //=========================================== 
+const areaOrPerimeter = function(l , w) {
+
+    return  l == w
+    ?   l * w
+    :   (l + w)* 2
+};
+// console.log(areaOrPerimeter(6,10));
+
+ //=========================================== 
+ function reverseWords(str) {
+
+ }
+console.log( reverseWords());
+
 
 
 

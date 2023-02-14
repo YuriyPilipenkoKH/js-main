@@ -206,13 +206,13 @@ const count =  strArray
 function XO(str) {
   const amountArray = str.toLowerCase().split('')
 
-//   console.log(amountArray);
+  // console.log(amountArray);
 
   const count =  amountArray
     .reduce((count, item) => (count[item] = count[item] + 1 || 1, count), {});
-    // console.log(count);
-    // console.log(count.o);
-    // console.log(count['x']);
+    console.log(count);
+    console.log(count.o);
+    console.log(count['x']);
 
     if(count['o'] === count['x']) {
         return true
@@ -223,7 +223,7 @@ function XO(str) {
     //------------------------------------------------
     //  return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length;
 }
-// console.log(XO("ooxx"));
+console.log(XO("ooxx"));
 // console.log(XO("ooxXm"));
 
 //===================================
@@ -357,7 +357,7 @@ return x.split(' ').filter(el => el).join('')
 //   return x.replace(/\s/g, '');
 //   const noSpace = x => x.replace(/ /g, "");
 }
-// console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'));
+console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'));
 
 //===================================================
 //remove all of the vowels 
