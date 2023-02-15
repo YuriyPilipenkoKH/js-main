@@ -7,7 +7,7 @@ const players = [
     {id: 'player-4', name: 'ajax', timePlayed: 150, points: 71, online: false,},
     {id: 'player-5', name: 'chelsey', timePlayed: 80, points: 48, online: true,},
   ];
-  console.table(players)
+  // console.table(players)
   
   const playersNames = players.map(player => {
     // console.log(player);
@@ -57,10 +57,10 @@ const players = [
   // console.table(updatedPlayers2)
   
   const updatedPlayers3 = players.map(player => {
-    console.log(player.id);
+    // console.log(player.id);
   
     if (playerIdToUpdate === player.id) {
-      console.log('found our player');  
+      // console.log('found our player');  
   
       return {
         ...player,
@@ -69,7 +69,7 @@ const players = [
     }
     return player
   })
-  console.table(updatedPlayers3)
+  // console.table(updatedPlayers3)
   
   const updatedPlayers4 = players.map(player => {
   
@@ -81,4 +81,4 @@ const players = [
     : player
   });
    
-  console.table(updatedPlayers4)
+  // console.table(updatedPlayers4)

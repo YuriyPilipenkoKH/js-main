@@ -1,5 +1,6 @@
 
-console.log('codewars    level_01');
+console.log('codewars[32]     4 294 967 296');
+// Automedon/CodeWars-6-kyu-Soluitions
 
 //=================================================
 // each  character x2
@@ -337,10 +338,180 @@ const areaOrPerimeter = function(l , w) {
 // console.log(areaOrPerimeter(6,10));
 
  //=========================================== 
- function reverseWords(str) {
+ function areYouPlayingBanjo(name) {
 
+    let nod = name.toLowerCase()
+
+    return nod.startsWith('r') 
+            ?   `${name} plays banjo`
+            :   `${name} does not play banjo`
+  }
+
+// console.log(areYouPlayingBanjo('ringo'));
+ //=========================================== 
+
+ function findEvenIndex(arr)
+{
+    return arr.findIndex((e,i,a)=> a.slice(0,i).reduce((p,c)=>p+c,0)==a.slice(i+1).
+    reduce((p,c)=>p+c,0));
+}
+// console.log(findEvenIndex([1,100,50,-51,1,1]));
+
+function countPositivesSumNegatives(input) {
+
+const pos = input.filter(el => el > 0).length
+const neg = input.filter(el => el < 0).reduce((acc,el) => acc +el)
+console.log(pos);
+console.log(neg);
+return [pos,neg]
+
+}
+//  console.log(countPositivesSumNegatives([1, 2, 3, 4, 0, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
+
+ //=========================================== 
+
+ class Kata {
+    static getVolumeOfCuboid(length, width, height) {
+      return length * width * height
+    }
+  }
+
+// console.log(Kata.getVolumeOfCuboid(2,2,2));
+ //=========================================== 
+
+var humanYearsCatYearsDogYears = function(humanYears) {
+if(humanYears == 1) return [1,15,15]
+if(humanYears == 2) return [2,24,24]
+ 
+    return [
+        humanYears,
+        24 + (humanYears -2) * 4,
+        24 + (humanYears -2) * 5
+    
+    ]
+  }
+//   console.log(humanYearsCatYearsDogYears(5));
+ //=========================================== 
+ //Break camelCase
+
+function solution(string) {
+    return(string.replace(/([A-Z])/g, ' $1'));
+    
+}
+// console.log(solution("camelCasing" ));
+ //=========================================== 
+ function nbYear(p0, percent, aug, p) {
+    let years = 0;
+  for (years; p0 < p; years++) {
+    p0 += p0 * (percent / 100) + aug;
+  }
+  return years;
+}
+// console.log(nbYear((1500, 5, 100, 5000)));
+
+ //===========================================
+ 
+ function points(games) {
+// const ponCount = []
+return games.map((el)  => el.split(':')).map((el) => (el[0] > el[1]) ? 3 : (el[0] < el[1]) ? 0 : 1 ).
+reduce((acc,el) => acc + el, 0)
+
+  }
+
+//console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]));
+// console.log(points(["1:1","2:2","3:3","4:4","2:2","3:3","4:4","3:3","4:4","4:4"]));
+// console.log(points(["0:1","0:2","0:3","0:4","1:2","1:3","1:4","2:3","2:4","3:4"]));
+ //=========================================== 
+ function hoopCount (n) {
+
+    return n >= 10 
+        ?   "Great, now move on to tricks"  
+        :   "Keep at it until you get it"
  }
-console.log( reverseWords());
+// console.log( hoopCount(1));
+
+ //=========================================== 
+
+ function rps(p1, p2){
+    if (p1 === p2) {
+        return `Draw!`;
+      }
+      if (p1 === 'rock' && p2 === 'scissors') {
+        return `Player 1 won!`;
+      } else if (p1 === 'paper' && p2 === 'rock') {
+        return `Player 1 won!`;
+      } else if (p1 === 'scissors' && p2 === 'paper') {
+        return `Player 1 won!`;
+      } else {
+        return `Player 2 won!`;
+      }
+
+
+};
+// console.log(rps('rock', 'scissors'));
+
+ //=========================================== 
+// powers of 2
+
+function powersOfTwo(n){
+const result =[]
+    for (let i = 0; i < n+1; i+=1) {
+       console.log(2**i);
+       result.push(2**i)
+       console.log(result);
+    }
+    
+    return result
+
+    //---------------------------------------------
+    //return [...Array(n + 1)].map((_, i) => 2 ** i)
+    //---------------------------------------------
+  }
+// console.log(powersOfTwo(5)); 
+// console.log(powersOfTwo(32));
+
+//++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+function objPowTwo(n) {
+
+    var myList = new Object();
+    const temp = [...Array(n + 1)].map((_, i) => 2 ** i)
+    // console.log(temp);
+
+    const result = temp.map( function( el,id)  {
+    console.log(id, el)
+    return myList[id] = el
+    }, [])
+
+    return myList
+}
+console.log(objPowTwo(32));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //=========================================== 
+ //=========================================== 
+ //=========================================== 
+ //=========================================== 
+ //=========================================== 
+ //=========================================== 
+ //=========================================== 
+ //=========================================== 
+
 
 
 
