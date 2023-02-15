@@ -86,19 +86,26 @@ return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).
 
   }
 //   console.log(expandedForm(12085));
-
-
-
-
-
-
-
-
-
-
-
   //=========================================================
-  //=========================================================
+  function findNextSquare(sq) {
+
+    return Number.isInteger(Math.sqrt(sq))
+        ?   Math.sqrt(sq) === 0
+                ?   -1
+                :   ((Math.sqrt(sq))+1) ** 2
+        :   -1
+        
+     //---------------------------------------------   
+    //var root = Math.sqrt(sq);
+  //return root % 1 === 0 ? Math.pow(root + 1, 2) : -1;    
+  }
+
+console.log(findNextSquare(121));
+
+// console.log(Number.isInteger(-55.3));
+
+
+
   //=========================================================
   //=========================================================
   //=========================================================
