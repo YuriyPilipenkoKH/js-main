@@ -486,10 +486,16 @@ function objPowTwo(n) {
 
     return myList
 }
-console.log(objPowTwo(32));
+// console.log(objPowTwo(100));
+// console.log(objPowTwo(56)[44]);
 
+function arPowTwo(n) {
+  
+  const temp = [...Array(n + 1)].map((_, i) => 2 ** i)
+  return temp.map((el,id) => [id,el])
 
-
+}
+// console.log(arPowTwo(32));
 
 
 
