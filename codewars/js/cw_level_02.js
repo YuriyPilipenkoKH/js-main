@@ -185,13 +185,117 @@ return string
  }
 // console.log(oddOrEven([]));
   //=========================================================
+  function alphabetPosition(text) {
+    // const abet = '0123456789abcdefghijklmnopqrstuvwxyz'
+    // const abetArray = abet.split('')
 
+    // console.log(abetArray[19]);
+    // console.log(abetArray.indexOf('a'));
 
+    
+  // return text
+  //       .toLowerCase()
+  //       .replace(/ /g, '')
+  //       .replace(/,/g, '')
+  //       .replace(/'/g, '')
+  //       .replace('.', '')
+  //       .split('')
 
+        //.map(el =>  typeof el === 'string' ? el = abetArray.indexOf(el)-9 : el )   //abetArray.indexOf(el)+1)
+//.join(' ')
+ 
+return text.split('').filter(v=>/[a-zA-Z]/.test(v)).map(v=>v.toLowerCase().charCodeAt(0)-96).join(' ');
+  }
 
+// console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+// console.log(alphabetPosition('0 19 2 0 0 0 25 21'));
 
+  //=========================================================
+  function firstNonConsecutive (arr) {
+    for (let i = 0; i <arr.length-1; i++){
+      if(arr[i+1] != arr[i]+1){
+        return arr[i+1];
+      }
+    }
+    return null;
+  }
+  // console.log(firstNonConsecutive([1,2,3,4,6,7,8]));
+  //=========================================================
+  function finalGrade (exam, projects) {
 
-  
+    return exam > 90 && projects > 10 
+            ? 100
+            : exam > 75 || projects >= 5 
+                ? 90
+                : exam > 50 || projects >= 2 
+                    ? 75
+                    : 0
+  }
+// console.log(finalGrade(19, 4));
+  //=========================================================
+
+  function solution(str, ending){
+
+    return str.endsWith(ending)
+
+  }
+// console.log(solution('abcde', 'cde'));
+
+  //=========================================================
+
+  function filter_list(l) {
+
+    return  l.filter(el => typeof el === 'number')
+    // return  l.filter(el => typeof el === 'string')
+  }
+// console.log(filter_list([1,'a','b',0,15]));
+
+  //=========================================================
+  function isIsogram(str){
+
+  const obj = str.toLowerCase().split('')
+                 .reduce((acc, it) => (acc[it] = acc[it] + 1 || 1, acc), {})
+// console.log(Object.values(obj));
+
+  return !(Object.values(obj).some(e => e > 1))
+
+  }//  return !/(\w).*\1/i.test(str)
+// console.log(isIsogram("Isogram"));
+  //=========================================================
+  function booleanToString(b){
+   
+    // return b.toString()
+    // return String(b)
+    // return `${b}`
+    return b+'';
+    
+  }
+  // console.log(booleanToString(true));
+  //=========================================================
+  function minMax(arr){
+
+    let h = Math.max(...arr)
+    let l = Math.min(...arr)
+
+    return [l,h]; 
+
+  }
+console.log(minMax([1,2,3,4,5]));
+
+  //=========================================================
+  //=========================================================
+  //=========================================================
+  //=========================================================
+  //=========================================================
+  //=========================================================
+  //=========================================================
+  //=========================================================
+  //=========================================================
+  //=========================================================
+  //=========================================================
+  //=========================================================
+  //=========================================================
+  //=========================================================
   //=========================================================
   //=========================================================
   //=========================================================
