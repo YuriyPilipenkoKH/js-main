@@ -6,15 +6,16 @@ for (const btn of btns) {
         let card =  this.closest('.card')
         let dots = card.querySelector('.dots')
         let more = card.querySelector('.more')
+        
 
         if(dots.style.display === 'none') {
             dots.style.display = 'inline'
             more.style.display = 'none'
-            this.textContext = 'Reveal'
+            this.textContent = 'Reveal'
         } else {
             dots.style.display = 'none'
             more.style.display = 'inline'
-            this.textContext = "Hide"
+            this.textContent = "Hide"
         }
     })
 }
