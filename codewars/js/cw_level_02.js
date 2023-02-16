@@ -207,7 +207,7 @@ return string
 return text.split('').filter(v=>/[a-zA-Z]/.test(v)).map(v=>v.toLowerCase().charCodeAt(0)-96).join(' ');
   }
 
-console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+// console.log(alphabetPosition("The sunset sets at twelve o' clock."));
 // console.log(alphabetPosition('0 19 2 0 0 0 25 21'));
 
   //=========================================================
@@ -426,7 +426,7 @@ return a.some(e => e = x)
   );
   return s.split(' ')[as.indexOf(Math.max(...as))];
   }
-console.log(high('man i need a taxi up to ubud'));
+// console.log(high('man i need a taxi up to ubud'));
 // console.log(high('what time are we climbing up the volcano'));
   //=========================================================
 
