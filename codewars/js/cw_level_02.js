@@ -186,10 +186,10 @@ return string
 // console.log(oddOrEven([]));
   //=========================================================
   function alphabetPosition(text) {
-    // const abet = '0123456789abcdefghijklmnopqrstuvwxyz'
-    // const abetArray = abet.split('')
+    const abet = '0123456789abcdefghijklmnopqrstuvwxyz'
+    const abetArray = abet.split('')
 
-    // console.log(abetArray[19]);
+    // console.log(abetArray[13]);
     // console.log(abetArray.indexOf('a'));
 
     
@@ -207,7 +207,7 @@ return string
 return text.split('').filter(v=>/[a-zA-Z]/.test(v)).map(v=>v.toLowerCase().charCodeAt(0)-96).join(' ');
   }
 
-// console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+console.log(alphabetPosition("The sunset sets at twelve o' clock."));
 // console.log(alphabetPosition('0 19 2 0 0 0 25 21'));
 
   //=========================================================
@@ -375,6 +375,9 @@ return this.split('')
 
     const obj = arr.reduce((acc, it) => (acc[it] = acc[it] + 1 || 1, acc), {})
       console.log(Object.values(obj)['1']);
+
+      const {NORTH, SOUTH, EAST, WEST} = obj
+
       return Object.keys(obj)[Object.values(obj)['1']]
 //----------------------------------------------------------
 // var count = 0;
@@ -399,27 +402,203 @@ return a.some(e => e = x)
   }
 // console.log(check([101, 45, 75, 105, 99, 107],107));
   //=========================================================
-  function high(x){
-    const arra = []
+  function high(s){
+    const abet = 'abcdefghijklmnopqrstuvwxyz'
+    const abetArray = abet.split('')
 
-    return x.split(' ')
-      
-            
+    console.log(abetArray[13]);
+
+//     const prom =  s.split(' ')
+//             .map(el => el= [el.split('')
+//             .map(el => el = abetArray.indexOf(el))
+//             .reduce((a,b) => a+b)])
+//             .flat()
+//             // const index = prom.indexOf(Math.max(...prom))
+//             .reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0)
+
+// // console.log(prom);
+// // console.log(index);
+// return s.split(' ')[prom]
+
+  //----------------------------------------------------------------
+  
+  let as = s.split(' ').map(s => [...s].reduce((a, b) => a+b.charCodeAt(0) - 96, 0)
+  );
+  return s.split(' ')[as.indexOf(Math.max(...as))];
   }
 console.log(high('man i need a taxi up to ubud'));
+// console.log(high('what time are we climbing up the volcano'));
   //=========================================================
-function temp(st) {
-  const arra = []
-  for (let i = 0; i < st.length; i++) {
-   arra.push(st[i])
 
-  }
-return arra
+  
+function temp(st) {
+  // const arra = []
+  // for (let i = 0; i < st.length; i++) {
+  //  arra.push(st[i])
+  // }
+  const abet = 'abcdefghijklmnopqrstuvwxyz'
+  const abetArray = abet.split('')
+
+    // console.log(abetArray[19]);
+    // console.log(abetArray.indexOf('o'));
+
+return st.split('').map(el => el = abetArray.indexOf(el)).reduce((a,b) => a+b)
 }
 // console.log(temp('goodbuy'));
 
+var a = [0, 21, 22, 7];
+var indexOfMaxValue = a.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0);
+// console.log(indexOfMaxValue);
+
+  //=========================================================
+  function arithmetic(a, b, operator){
+
+    return operator === 'add'
+            ? a + b
+            : operator === 'subtract' 
+              ? a-b
+              : operator === 'divide' 
+                ? a/b
+                : operator === 'multiply' 
+                  ? a*b
+                  : 0
+
+  }
+  // console.log(arithmetic(8, 2, "subtract"));
+
+  //=========================================================
+  function highAndLow(numbers){
+
+const dg = numbers.split(' ').map(Number)
 
 
+    const hi = Math.max(...dg)
+    const lo = Math.min(...dg)
+
+  return `${hi} ${lo}`
+  }
+// console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+
+  //=========================================================
+
+  function findDifference(a, b) {
+      const asq = a.reduce((x,y) => x * y)
+      const bsq = b.reduce((x,y) => x * y)
+      console.log(asq);
+      console.log(bsq);
+    
+      return Math.abs(asq - bsq)
+  }
+// console.log(findDifference([3, 2, 5], [1, 4, 4]));
+
+  //=========================================================
+  function roundToNext5(n){
+    const rest = n % 5
+   
+    return n % 5 === 0
+            ? n
+            : n > 0 
+              ? n - rest + 5
+              : n - rest 
+
+  }// return Math.ceil(n/5)*5;
+  // console.log(roundToNext5(12));
+
+  //=========================================================
+  function getMiddle(s){
+
+  // const qs = s.split('')
+  // console.log(qs.length);
+  // // console.log(qs[2]);
+  // console.log(qs[(qs.length)/2])
+
+  // return qs.length % 2 === 0
+  //       ?  `${qs[qs.length/2-1]}${qs[qs.length/2]}`
+  //       :  `${qs[qs.length/2]}`.
+  //-------------------------------------
+  return s.slice((s.length - 1) / 2, s.length/2 +1)
+      
+
+  }//`${qs.length/2}${qs.length/2+1}`
+
+// console.log(getMiddle("testl"));
+  //=========================================================
+  function updateLight(current) {
+  return current === "green"
+        ? "yellow"
+        : current === "yellow" 
+          ? "red"
+          : current === "red"
+             ? "green"
+             : 0
+
+
+  }
+// console.log(updateLight("yellow"));
+  //=========================================================
+  function findMultiples(integer, limit) {
+  const tr = []
+  for (let i = integer; i <= limit ; i+= integer) {
+    tr.push(i)
+  }
+  
+  return tr
+  }// return Array(Math.floor(limit/int)).fill(1).map((x,i)=>int*(i+1));
+// console.log(findMultiples(5,21));
+
+  //=========================================================
+  function expressionMatter(a, b, c) {
+    let output = [];
+  output.push(a *(b + c));
+  output.push(a * b * c);
+  output.push(a + b * c);
+  output.push((a + b) * c);
+  output.push(a+b+c);
+    return Math.max(...output);
+  
+  }//return Math.max(a+b+c, a*b*c, (a+b)*c, a*(b+c));
+// console.log(expressionMatter(1,2,3));
+
+  //=========================================================
+  function solut(nums){
+
+    return nums 
+            ? nums.sort((a,b) => a-b)
+            : []
+
+  }
+  // console.log(solut([1, 2, 10, 50, 5]));
+  // console.log(solut());
+  //=========================================================
+ function rot13(str){
+    var lower = "abcdefghijklmnopqrstuvwxyz",
+        upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        mod   = upper.length;
+      
+    return str
+     .split('')
+     .map(function(i) {
+            return i.match(/[a-zA-Z]/) 
+                ? (i.charCodeAt(0) < 90) 
+                    ? upper[(upper.indexOf(i) + 13) % mod]
+                    : lower[(lower.indexOf(i) + 13) % mod]
+                : i;
+     })
+     .join('');
+}
+// console.log(rot13('ws~=[c elXZ'));
+
+  //=========================================================
+
+
+
+  //=========================================================
+
+  //=========================================================
+  //=========================================================
+  //=========================================================
+  //=========================================================
+  //=========================================================
   //=========================================================
   //=========================================================
   //=========================================================
