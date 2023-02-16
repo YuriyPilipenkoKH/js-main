@@ -234,14 +234,14 @@ function findUniq2(arr) {
 // console.log(findUniq2([0, 1, 0, 0 ]));
 //===========================================
 function findUniqs(arr) {
-    // const obj = arr.reduce((count, item) => (count[item] = count[item] + 1 || 1, count), {});
-    // console.log(obj);
-    // for(let key in obj){
-    //     if(obj[key] === 1) return key;
-    // }
+    const obj = arr.reduce((count, item) => (count[item] = count[item] + 1 || 1, count), {});
+    console.log(obj);
+    for(let key in obj){
+        if(obj[key] === 1) return key;
+    }
     //---------------------------------------------------------
     
-   return arr.find(n => arr.indexOf(n) === arr.lastIndexOf(n));
+  //  return arr.find(n => arr.indexOf(n) === arr.lastIndexOf(n));
 
   }
 //   console.log(findUniqs([ 1, 1, 1, 2, 1, 1 ]));
@@ -418,7 +418,7 @@ reduce((acc,el) => acc + el, 0)
 
   }
 
-//console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]));
+// console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]));
 // console.log(points(["1:1","2:2","3:3","4:4","2:2","3:3","4:4","3:3","4:4","4:4"]));
 // console.log(points(["0:1","0:2","0:3","0:4","1:2","1:3","1:4","2:3","2:4","3:4"]));
  //=========================================== 

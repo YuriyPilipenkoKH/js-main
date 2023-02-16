@@ -280,18 +280,146 @@ return text.split('').filter(v=>/[a-zA-Z]/.test(v)).map(v=>v.toLowerCase().charC
     return [l,h]; 
 
   }
-console.log(minMax([1,2,3,4,5]));
+// console.log(minMax([1,2,3,4,5]));
 
   //=========================================================
+  function numberToString(num) {
+      return num + ""
+    
+  }
+  // console.log(numberToString(67));
   //=========================================================
+  function findOdd(A) {
+    
+//     const ml = A.reduce((acc, it) => (acc[it] = acc[it] + 1 || 1, acc), {})
+//     console.log(Object.values(ml))
+//     console.log(Object.keys(ml))
+
+//   const res =  Object.keys(ml).forEach(el => {
+//       console.log(el);
+//       if(Object.values(ml) %2 !== 0) {
+//           return el
+//       }
+      
+//       })
+
+// return res
+//------------------------------------------------------
+let count = {};
+A.forEach(v => {
+  count[v] = count[v] ? count[v] + 1 : 1;
+});
+return +Object.keys(count).find(key => count[key] % 2 === 1);
+
+    }  //const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
+  // console.log(findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1]));
+
   //=========================================================
+  String.prototype.toAlternatingCase = function () {
+
+return this.split('')
+          .map((dt)  => {
+            if(dt.toUpperCase() === dt ) {
+              return dt.toLowerCase()
+            } else {
+              return dt.toUpperCase()
+            }
+          })
+            .join('')
+  }
+// console.log('test'.toAlternatingCase());
+
   //=========================================================
+  function saleHotdogs(n){
+
+    return n < 5 
+          ? 100
+          : n >= 5 && n < 10 
+               ? 95
+               : 90
+  }
+// console.log(saleHotdogs(5));
+
+//=========================================================
+  function domainName(url){
+    return url.toLowerCase()
+              .replace('http://', '')
+              .replace('https://', '')
+              .replace('www.', '')
+              .split('.')[0]
+
+//-----------------------------------------------
+// return url.match(/(?:http(?:s)?:\/\/)?(?:w{3}\.)?([^\.]+)/i)[1];
+// return url.replace(/.+\/\/|www.|\..+/g, '')
+  }
+// console.log(domainName("http://google.com"));
+
   //=========================================================
+  var uniqueInOrder=function(iterable){
+ 
+    const obj = typeof iterable === 'string' 
+                    ? iterable.split('').reduce((acc, it) => (acc[it] = acc[it] + 1 || 1, acc), {})
+                    : iterable.reduce((acc, it) => (acc[it] = acc[it] + 1 || 1, acc), {})
+
+    
+      return  typeof iterable === 'string' 
+                      ? Object.keys(obj)
+                      : Object.keys(obj).map(Number)           
+  }
+  // console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+  // console.log(uniqueInOrder([1,2,2,3,3]));
+
   //=========================================================
+  function dirReduc(arr){
+    const one = 1
+
+    const obj = arr.reduce((acc, it) => (acc[it] = acc[it] + 1 || 1, acc), {})
+      console.log(Object.values(obj)['1']);
+      return Object.keys(obj)[Object.values(obj)['1']]
+//----------------------------------------------------------
+// var count = 0;
+// for (var i = 0; i < arr.length; i++) {
+//   if (arr[i] === "WEST" && arr[i+1] === "EAST" ||
+//       arr[i] === "EAST" && arr[i+1] === "WEST" ||
+//       arr[i] === "NORTH" && arr[i+1] === "SOUTH" ||
+//       arr[i] === "SOUTH" && arr[i+1] === "NORTH") {
+//       arr.splice(i, 2);
+//       count++;
+//       i--;
+//   }
+// }
+// return count === 0 ? arr : dirReduc(arr);
+
+  }
+// console.log(dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]));
   //=========================================================
+  function check(a, x) {
+
+return a.some(e => e = x)
+  }
+// console.log(check([101, 45, 75, 105, 99, 107],107));
   //=========================================================
+  function high(x){
+    const arra = []
+
+    return x.split(' ')
+      
+            
+  }
+console.log(high('man i need a taxi up to ubud'));
   //=========================================================
-  //=========================================================
+function temp(st) {
+  const arra = []
+  for (let i = 0; i < st.length; i++) {
+   arra.push(st[i])
+
+  }
+return arra
+}
+// console.log(temp('goodbuy'));
+
+
+
   //=========================================================
   //=========================================================
   //=========================================================

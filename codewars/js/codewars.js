@@ -410,8 +410,8 @@ const binaryArrayToNumber = arr => {
 //  length of the shortest word
 
 function findShort(s){
-// const tod = s.split(' ').map((str, index) => ({ value: str, id: index + 1 }));
-// console.log(tod[0].value);
+const tod = s.split(' ').map((str, index) => ({ value: str, id: index + 1 }));
+console.log(tod[0].value);
 
 const shortestWord = s.split(' ').reduce((a, b) => a.length <= b.length ? a : b)
 return shortestWord.length
