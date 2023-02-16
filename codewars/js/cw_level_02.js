@@ -94,22 +94,104 @@ return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).
                 ?   -1
                 :   ((Math.sqrt(sq))+1) ** 2
         :   -1
-        
+
      //---------------------------------------------   
     //var root = Math.sqrt(sq);
   //return root % 1 === 0 ? Math.pow(root + 1, 2) : -1;    
   }
 
-console.log(findNextSquare(121));
+// console.log(findNextSquare(25));
 
 // console.log(Number.isInteger(-55.3));
+  //=========================================================
+
+  function sumOfSquares(n) {
+    const pArray =[]
+    let count = 0
+    
+    while (pArray.reduce((a,b) => a+b) !== n) {
+        count +=1
+        pArray.push(5)
+    }
+
+return pArray
+
+  }
+// console.log(sumOfSquares(15));
+
+ //=========================================================
+
+function correct(string){
+
+// const fin = string.split('').map(el => el.includes('0') ? el.replace('0','O') :el)
+// console.log(fin[1].includes('0'))
+// fin.map(el => el.includes('0') ? el.replace('0','O') :el)
+// return fin
+//--------------------------------------------------
+
+return string
+        .replace(/5/g, 'S')
+        .replace(/0/g, 'O')
+        .replace(/1/g, 'I')
+
+}
+// console.log(correct("L0ND0N"));
+  //=========================================================
+
+  function encrypt(text, n) {
+    // console.log(text, n);
+    if (!text || n <= 0) return text; 
+    while (n--) {
+      let ans = '';
+      for (let i = 1; i < text.length; i += 2) {
+        ans += text[i];
+      }
+      for (let i = 0; i < text.length; i += 2) {
+        ans += text[i];
+      }
+      text = ans;
+    }
+    return text;
+
+  }
+// console.log(encrypt("012345", 1));
+  
+  function decrypt(encryptedText, n) {
+    if (!encryptedText || n <= 0) return encryptedText;
+  const ans = new Array(encryptedText.length);
+  while (n--) {
+    let j = 0;
+    for (let i = 1; i < ans.length; i += 2) {
+      ans[i] = encryptedText[j++];
+    }
+    for (let i = 0; i < ans.length; i += 2) {
+      ans[i] = encryptedText[j++];
+    }
+    encryptedText = ans.join('');
+  }
+  return encryptedText;
+
+  }
+// console.log(decrypt('135024',1));
+  //=========================================================
+  function oddOrEven(array) {
+    if(array.length === 0) {
+        return "even"
+    } else {
+        return array.reduce((el,id) => el + id ) % 2 === 0
+        ? "even"
+        : "odd"
+    }
+ }
+// console.log(oddOrEven([]));
+  //=========================================================
 
 
 
-  //=========================================================
-  //=========================================================
-  //=========================================================
-  //=========================================================
+
+
+
+  
   //=========================================================
   //=========================================================
   //=========================================================
