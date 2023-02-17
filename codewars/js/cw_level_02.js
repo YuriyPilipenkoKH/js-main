@@ -589,21 +589,170 @@ const dg = numbers.split(' ').map(Number)
 // console.log(rot13('ws~=[c elXZ'));
 
   //=========================================================
+  var capitals = function (word) {
+    const ara = []
+    const cv = word.split('')
+                  for (const c of cv) {
+                    // console.log(cv.indexOf(c));
+                    if(/^[A-Z]+$/.test(c)) {
+                      ara.push(cv.indexOf(c))
+                    }
+                  }
+     return ara
 
+  };
+// console.log(capitals('CodEWaRs'));
+  //=========================================================
+  class SmallestIntegerFinder {
+    constructor(arr) {
+      this.arr = arr;
+     
+    }
+    get small() {
+      return this.findSmallestInt();
+    }
+    
+    findSmallestInt() {
+      return this.arr.reduce((a,b) => a+b,0) 
+      
+       }
+       
+       
+  }
 
+  const int = new SmallestIntegerFinder([34, 15, 88, 2])
+  // console.log(int.small);
+  //=========================================================
+  function between(a, b) {
+
+    
+  //   const cd = []
+  //   for (let i = a; i <= b; i++) {
+  //    cd.push(i)
+      
+  //   }
+  // return cd
+  //---------------------------------------------------------
+  // return Array.from(new Array(b-a+1), (_, i) => a + i);
+  //---------------------------------------------------------
+  // return [...Array(b - a + 1)].fill(b).map((_, idx) => idx + a);
+  //---------------------------------------------------------
+  //  return Array.from({ length: b - a + 1 }, () => a++)
+  //---------------------------------------------------------
+  return Array(b - a + 1).fill(1).map((_, i) => a + i)
+  //---------------------------------------------------------
+  //---------------------------------------------------------
+  }
+// console.log(between(2,8));
+  //=========================================================
+function addFive (arg) {
+console.log(typeof arg);
+
+return typeof arg === 'number' 
+              ? arg + 5
+              : 0
+}
+// console.log(addFive('h'));
+
+  //=========================================================
+  function nbDig(n, d) {
+
+  const test = [...Array(n+1)].map((_, i) =>  i **2).map(el => el.toString())   
+  console.log(test);
+  console.log(test[5].includes('2'));
+
+  return test.filter(el => el.includes(`${d}`)).length
+  }
+  // console.log(nbDig(16, 2));
+
+  //=========================================================
+  function checkExam(array1, array2) {
+  console.log(array1.length);
+const res = array2.map( (el,id) => {
+  if (el === array1[id]) {
+      return 4
+  } else if (el ===  '') {
+    return 0
+  } else { return -1}
+}).reduce((a,b ) => a+b)
+  
+return res < 0 
+            ? 0
+            : res
+//------------------------------------------------------
+  //? return   Math.max(array2.reduce((a,b,i) =>b==array1[i]?a+4:b?a-1:a,0),0)        
+  
+  }
+// console.log(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]))
+// console.log(checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]))
+// console.log(checkExam(["a", "a", "c", "b"], ["d", "d", "d",  "d"]))
 
   //=========================================================
 
+  function count (string) {  
+  
+  
+  //   return string.split('')
+  //   .reduce((acc, it) => (acc[it] = acc[it] + 1 || 1, acc), {})
+//------------------------------------------------------
+//?  [...string].reduce((acc, el) => (acc[el] = -~acc[el], acc), {});
+//--------------------------------------------------------
+const r = {};
+string.split('').forEach(c => r[c] = (r[c] || 0) + 1);
+return r;
+  }
+//---------------------------------------------------------
+//?   const count = require('lodash').countBy;
+
+//  console.log(count("aba")); 
   //=========================================================
+  var isSquare = function(n){
+
+return Number.isInteger(Math.sqrt(n))
+// return Math.sqrt(n) % 1 === 0;
+  }
+  // console.log(isSquare(4));
   //=========================================================
+  function getChar(c){
+
+return  String.fromCharCode(c);
+  }
+// console.log(getChar(65));
+
   //=========================================================
+  function xor(a, b) {
+return Boolean(a^b)
+  
+  }//?  return a != b;
+// console.log(xor(false, false));
+
   //=========================================================
+  function disjunction(operands, isExclusive) {
+
+    return operands.reduce((a, b) => isExclusive ? a ^ b : a | b) != 0
+  
+  }//  return !(operands.reduce((a, b) => a ^ b, isExclusive));
+// console.log(disjunction([1, 2, 3], false));
+
   //=========================================================
-  //=========================================================
-  //=========================================================
-  //=========================================================
-  //=========================================================
-  //=========================================================
+  function logicalCalc(array, op){
+    let w 
+  op === "AND"
+      ? w = '&&'
+      : op === "OR"
+         ? w = '||'
+         :  op === "XOR"
+            ? w = '^'
+            : w = 0 
+
+      console.log(w); 
+
+      return Boolean(array.reduce((a,b) => `${a} ${w} ${b}`))
+
+ }
+console.log(logicalCalc([true, true, true, false], "AND"));
+console.log(logicalCalc([true, true, true, false], "XOR"));
+
   //=========================================================
   //=========================================================
   //=========================================================
