@@ -3,9 +3,9 @@ const btns = document.querySelectorAll('.btn__m01')
 
 for (const btn of btns) {
     btn.addEventListener('click', function() {
-        let card =  this.closest('.card')
-        let dots = card.querySelector('.dots')
-        let more = card.querySelector('.more')
+        const card =  this.closest('.card')
+        const dots = card.querySelector('.dots')
+        const more = card.querySelector('.more')
         
 
         if(dots.style.display === 'none') {

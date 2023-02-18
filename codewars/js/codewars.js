@@ -3,17 +3,18 @@ console.log('codewars');
 function countBy(x, n) {
     const z = [];
   
-    // for (let i = 1; i < n+1; i+=1) {
-    //  z.push(i*x)
+    for (let i = 1; i < n+1; i+=1) {
+     z.push(i*x)
         
-    // }
+    }
    
-    //    return  [...Array(n)].map((_, id) => (id += 1) * x)
-    // return  [...Array(n)].map((_, id) => ++ id * x)
-  
-    //returns array with length n all multiplyed by x
+       return  [...Array(n)]//.map((_, id) => (id += 1) * x)
+ //------------------------------------------------------------      
+    // return  [...Array(n)].map((_, id) => ++ id * x) 
+//-----------------------------------------------------------
+    // returns array with length n all multiplyed by x
   }
-//  console.log( countBy(2,10))
+ console.log( countBy(2,10))
 
 // ==========================================
 //   returns the time since midnight in milliseconds.

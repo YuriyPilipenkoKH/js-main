@@ -1,4 +1,5 @@
 console.log('codewars[53]  9 007 199 254 740 992');
+// querySelector
 
 function stray(numbers) {
     return numbers.reduce((acc,el) => acc^el)
@@ -264,9 +265,9 @@ return text.split('').filter(v=>/[a-zA-Z]/.test(v)).map(v=>v.toLowerCase().charC
   //=========================================================
   function booleanToString(b){
    
-    // return b.toString()
-    // return String(b)
-    // return `${b}`
+    //?  return b.toString()
+    //?  return String(b)
+    //?  return `${b}`
     return b+'';
     
   }
@@ -615,6 +616,7 @@ const dg = numbers.split(' ').map(Number)
     findSmallestInt() {
       return this.arr.reduce((a,b) => a+b,0) 
       
+
        }
        
        
@@ -736,27 +738,153 @@ return Boolean(a^b)
 
   //=========================================================
   function logicalCalc(array, op){
-    let w 
-  op === "AND"
-      ? w = '&&'
-      : op === "OR"
-         ? w = '||'
-         :  op === "XOR"
-            ? w = '^'
-            : w = 0 
+  //   let w 
+  // op === "AND"
+  //     ? w = '&&'
+  //     : op === "OR"
+  //        ? w = '||'
+  //        :  op === "XOR"
+  //           ? w = '^'
+  //           : w = 0 
 
-      console.log(w); 
+  //     console.log(w); 
 
-      return Boolean(array.reduce((a,b) => `${a} ${w} ${b}`))
+  //     return Boolean(array.reduce((a,b) => `${a} ${w} ${b}`))
+  //--------------------------------------------------------
+  //return !!array.reduce((prev,cur)  => op == 'AND' ? prev && cur : op == 'OR' ? prev || cur : prev ^ cur  )
+  //--------------------------------------------------------
 
  }
-console.log(logicalCalc([true, true, true, false], "AND"));
-console.log(logicalCalc([true, true, true, false], "XOR"));
+// console.log(logicalCalc([true, true, true, false], "AND"));
+// console.log(logicalCalc([true, true, true, false], "XOR"));
+  //=========================================================
+  function reverseLetter(str) {
+
+    return  str.replace(/[^a-z]/g, '').split('').reverse().join('')
+    
+  }// str.match(/[a-z]/g).reverse().join('');
+// console.log(reverseLetter("ultr53o?n"));
 
   //=========================================================
+  function openOrSenior(data){
+
+// return [...Array(data.length)].fill(1)
+          // .map((el,i) => (data[i][0] >= 55) || (data[i][1] > 7) ? 'Senior' : 'Open' )
+          //----------------------------------------------------------------------------
+              // .map(function(el,i) {
+              //   console.log(data[i][1]);
+              //   return el
+              // })
+   //----------------------------------------------------
+    return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');           
+
+  }
+// console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]));
+// console.log(openOrSenior([[59, 12],[55,-1],[12, -2],[12, 12]]));
   //=========================================================
+  // string to char
+function funn (a) {
+
+  const char = a.map(el => el.charCodeAt() )
+  const bin = char.map(el => el.toString(2)).map(Number)
+
+  console.log(char);
+  console.log(bin);
+  // console.log('C'.charCodeAt());
+
+  return this
+}
+console.log(funn(['p','a','s','s','w','o','r','d']));
   //=========================================================
+  function binaryToString(binary){
+    console.log(String.fromCharCode(67, 97, 116));
+  
+return binary.replace(/0b/g, '.')
+             .split('.')
+             .filter(e => e)
+             .map(Number)
+            //  .map(e => parseInt(e, 2))
+            //  .map(e => String.fromCharCode(e))
+            //  .join('')
+   //-----------------------------------------------------
+   //?  String.fromCharCode(...binary.split(/(?=0b)/));          
+   //-----------------------------------------------------
+   //? String.fromCharCode( ...binary.split( /(?=0b)/ ).map(Number) ) ;         
+   //----------------------------------------------------- 
+   //?  String.fromCharCode(...a.slice(2).split`0b`.map(a=>parseInt(a,2)))         
+          
+  }
+// console.log(binaryToString('0b10000110b11000010b1110100'));
   //=========================================================
+  function decodePass( passArr, bin ){
+ 
+    const keyPass = bin.split(' ')
+               .map(Number)
+               .map(e => parseInt(e, 2))
+               .map(e => String.fromCharCode(e))
+               .join('') 
+
+    const fin = passArr.filter(el => keyPass === el ? el : false)     
+    return fin.length !== 0
+            ? fin.toString()
+            : false
+//---------------------------------------------------------
+//const password = String.fromCharCode( ...s.split(" ").map( s => Number.parseInt(s,2) ) );
+//return a.includes(password) && password ;
+
+//---------------------------------------------------------
+//let out = bin.split(' ').map($ => String.fromCodePoint(parseInt($,2))).join('')
+//return passArr.includes(out) ? out : false
+//---------------------------------------------------------
+// passArr.find(
+//   (pass) =>
+//     pass ===
+//     bin
+//       .split(' ')
+//       .map((b) => String.fromCharCode(parseInt(b, 2)))
+//       .join('')
+// ) || false;
+//---------------------------------------------------------
+// const password = bin.split` `.map(b => String.fromCharCode(parseInt(b, 2))).join``;
+//   return passwords.find(pass => pass === password) || false;
+//---------------------------------------------------------
+//  const password = String.fromCharCode(...bin.split(' ').map(x => parseInt(x, 2)));
+  // return passArr.includes(password) && password;
+//---------------------------------------------------------
+  }
+//console.log(decodePass(['password123', 'admin', 'admin1'], '01110000 01100001 01110011 01110011 01110111 01101111 01110010 01100100 00110001 00110010 00110011'));
+
   //=========================================================
+function twoString(arg) {
+
+return Math.E.toString()
+}
+// console.log(twoString());
+  //=========================================================
+
+  //  const conditions  
+  // Test.assertEquals((123).toString(), "123"),
+  // Test.assertEquals(Math.PI.toString(), "3.141592653589793"),
+  // Test.assertEquals(Math.E.toString(), "2.718281828459045"),
+  // Test.assertEquals(true.toString(), "true"),
+  // Test.assertEquals(false.toString(), "false"),
+  // Test.assertEquals([1,2,3,4,5].toString().replace(/\s+/g, ""), "[1,2,3,4,5]"),
+   
+
+  Boolean.prototype.toString = Number.prototype.toString = Array.prototype.toString =
+  function () { return JSON.stringify(this); }
+  //------------------------------------------------=--------
+  //String.prototype.toString = function(){
+ // return `${this}`
+//}
+
+  //=========================================================
+  function toBinaryString(number){
+
+  return Array(4).fill(0)
+                 .map((e,i) => 2**i)
+                 
+  }
+// console.log( toBinaryString(15));
   //=========================================================
   //=========================================================
