@@ -6,12 +6,15 @@ for (const btn of btns) {
         const card =  this.closest('.card')
         const dots = card.querySelector('.dots')
         const more = card.querySelector('.more')
+
+        console.log(this);
         
 
         if(dots.style.display === 'none') {
             dots.style.display = 'inline'
             more.style.display = 'none'
             this.textContent = 'Reveal'
+          
         } else {
             dots.style.display = 'none'
             more.style.display = 'inline'

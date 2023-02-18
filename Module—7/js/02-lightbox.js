@@ -1,8 +1,6 @@
 import { galleryItems } from './gallery-items.js';
-console.log('df');
 
 const imageGallery = document.querySelector('.gallery');
-
 const cardsMarkup = createImageGallery(galleryItems);
 imageGallery.innerHTML = cardsMarkup
 imageGallery.addEventListener('click',onPhotoClick)
@@ -24,7 +22,6 @@ function createImageGallery(galleryItems) {
             return;
         }
        
-    
         imageGallery.addEventListener('keydown',   (e) => {
             if (e.code === "Escape") {
                 instance.close()
