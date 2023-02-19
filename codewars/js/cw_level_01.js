@@ -495,7 +495,7 @@ function arPowTwo(n) {
   return temp.map((el,id) => [id,el])
 
 }
-// console.log(arPowTwo(32));
+console.log(arPowTwo(32));
 
 
 

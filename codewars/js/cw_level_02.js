@@ -794,7 +794,7 @@ function funn (a) {
 
   return this
 }
-console.log(funn(['p','a','s','s','w','o','r','d']));
+// console.log(funn(['p','a','s','s','w','o','r','d']));
   //=========================================================
   function binaryToString(binary){
     console.log(String.fromCharCode(67, 97, 116));
@@ -880,11 +880,136 @@ return Math.E.toString()
 
   //=========================================================
   function toBinaryString(number){
+    const out = Array(4).fill(0)
 
-  return Array(4).fill(0)
+  const pow = Array(4).fill(0)
                  .map((e,i) => 2**i)
+
+     while (out.reduce((a,b) => a+b) < number) {
+    out.push('1')
+     }            
+                 console.log(out);
                  
   }
-// console.log( toBinaryString(15));
+// console.log( toBinaryString(15)); // MY solution
   //=========================================================
+// program to convert decimal to binary
+function convertToBinary(x) {
+  let bin = 0;
+  let rem, i = 1, step = 1;
+
+  while (x != 0) {
+      rem = x % 2;
+      console.log(
+          `Step ${step++}: ${x}/2, Remainder = ${rem}, Quotient = ${parseInt(x/2)}`
+      );
+      x = parseInt(x / 2);
+      bin = bin + rem * i;
+      i = i * 10;
+  }
+  console.log(`Binary: ${bin}`);
+}
+
+// take input
+// let number = prompt('Enter a decimal number: ');
+// convertToBinary(number);
   //=========================================================
+  // bin to dec
+  const getDecimalValue = function (head) {
+
+    let total = head.reduce(
+        (sum) =>
+        sum + (head.shift() * Math.pow(2, head.length))
+    )
+    return total
+    //-------------------------------------------------
+    // let sum = 0
+    // let i
+    // while ((i = head.shift()) !== undefined) {
+    //     sum += (i * Math.pow(2, head.length))
+    //     // console.log(i * Math.pow(2, head.length))
+    // }
+    // return sum
+}
+// console.log(getDecimalValue([1,0,1]));
+  //=========================================================
+// dec to bin
+
+function d2b(x) {
+  for (let j = x; j <= 16; j++) {
+    console.log(j);
+
+    let res = ""
+    let number = j
+   
+     while (number > 0) {
+       res = res + number % 2
+       number = Math.floor(number / 2)
+     }
+   
+ let    len = res.length
+   
+ let rev=""
+   
+     for (let i = 1; i <= len; i++) {
+       rev = rev + res[res.length - i]
+     }
+     
+    //  console.log(rev)
+    return rev
+   }
+
+}
+  // console.log(d2b(2));
+
+  //=========================================================
+  // git hub solution
+
+  function to2BinaryString(num){
+    let out = "", bit = 1;
+     while( num >= bit ) {
+         out = ( num & bit ? 1 : 0 ) + out;
+         bit <<= 1;
+     }
+     return out || "0";
+ }
+console.log(to2BinaryString(8));
+//=========================================================
+function to3BinaryString(n) {
+  if (!n) return '0';
+  for (var s = ''; n; n = n >> 1) s = (n % 2) + s;  
+  return s;
+}
+//=========================================================
+const to4BinaryString = n => {
+  for (var i = 0, s = ''; i < 32; i++, s += String(n >>> 31), n <<= 1);
+  return s.replace(/^0+/, '') || '0';
+}
+//=========================================================
+const to5BinaryString=(n,s='')=>!n?s||'0':toBinaryString(~~(n/2),n%2+s)
+//=========================================================
+const to6BinaryString = n => {
+  for (var i = 0, s = ''; i < 32; i++, s += String(n >>> 31), n <<= 1);
+  return s.replace(/^0+/, '') || '0';
+}
+//=========================================================
+function to7BinaryString(n) {
+  if (!n) return '0';
+  for (var s = ''; n; n = n >> 1) s = (n % 2) + s;  
+  return s;
+}
+//=========================================================
+const to8BinaryString=(n,s='')=>!n?s||'0':toBinaryString(~~(n/2),n%2+s)
+//=========================================================
+function to9BinaryString(d)
+{
+  var b = "";
+  do {
+    b = (d%2) + b;
+    d = Math.floor(d/2);
+  } while (d > 0);
+  return b;
+}
+//=========================================================
+const to10BinaryString = n => n ? (n > 1 ? toBinaryString(n >> 1) : '') + n % 2 : '0';
+//=========================================================

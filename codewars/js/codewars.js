@@ -14,7 +14,7 @@ function countBy(x, n) {
 //-----------------------------------------------------------
     // returns array with length n all multiplyed by x
   }
- console.log( countBy(2,10))
+//  console.log( countBy(2,10))
 
 // ==========================================
 //   returns the time since midnight in milliseconds.
@@ -186,7 +186,7 @@ return  Number(realDigits.map((el,id) => `${el ** 2}` ).join(''))
 // count true items
 function countSheeps(arrayOfSheep) {
     const strArray = arrayOfSheep.map((el) => `${el}`)
-    console.log(strArray);
+    // console.log(strArray);
     // console.log(arrayOfSheep);
     
 
