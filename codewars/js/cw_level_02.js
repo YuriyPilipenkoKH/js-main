@@ -371,6 +371,8 @@ return this.split('')
   // console.log(uniqueInOrder([1,2,2,3,3]));
 
   //=========================================================
+  //! Object from array
+  
   function dirReduc(arr){
     const one = 1
 
