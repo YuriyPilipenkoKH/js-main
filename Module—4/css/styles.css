@@ -24,6 +24,8 @@ ul, li, img  {
     justify-content: center;
 }
 
+
+
 .control {
   display: flex;
   gap: 20px;

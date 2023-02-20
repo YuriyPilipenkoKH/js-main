@@ -140,13 +140,35 @@ function noBoringZeros(n) {
   }
 // console.log((noBoringZeros(9060000)));
 //================================================================
+function position(letter){
+    const abet = 'abcdefghijklmnopqrstuvwxyz'
+    const abetArray = abet.split('')
 
-
-
+   const out = letter.charCodeAt() -96
+   return `Position of alphabet: ${out}`
+    }
+// console.log(position('z'));
+//================================================================
+function sumStr(a,b) {
+  
+    return( Number(a) + Number(b)).toString(2) 
+}
+// console.log(sumStr("4","5"));
+//================================================================
+function keepOrder(ary, val) {
+    const n = (element) => element > val;
+    
+    return ary.findIndex(n) !== -1
+             ? ary.findIndex(n) 
+             : ary.length
+  }
+// console.log(keepOrder([1, 2, 3, 4, 7], 5));
+// console.log(keepOrder([1, 2, 3, 4], 5));
+// console.log(keepOrder([1, 1, 2, 2, 2], 2));
 
 //================================================================
-//================================================================
-//================================================================
+
+
 //================================================================
 //================================================================
 //================================================================
