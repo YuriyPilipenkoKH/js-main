@@ -155,3 +155,38 @@ object-fit: cover;
   opacity: 1;
 }
 
+/* =========================================================== */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+.gallery__img {
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* ===================================================== */
+.counter {
+  display: grid;
+  grid-template-columns: repeat(3, 6em);
+  place-items: center;
+  justify-content: center;
+
+ 
+}
+
+.counter > button{
+  margin: 0;
+  padding: 8px 22px;
+  border-radius: 8px;
+  border: 1px solid #777;
+  font-size: 1em;
+}
+
+.counter > span{
+  font-size: 2em;
+  color:teal;
+}
