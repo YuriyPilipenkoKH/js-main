@@ -190,3 +190,22 @@ object-fit: cover;
   font-size: 2em;
   color:teal;
 }
+
+.amount {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.how__many {
+width: 50px;
+border: 3px solid #5ed1a5;
+border-radius: 10px;
+text-align: center;
+}
+
+.how__many:hover,
+.how__many:focus{
+  outline: none;
+  border-color: orange;
+}

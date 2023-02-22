@@ -315,15 +315,61 @@ function addLength(str) {
   const word = str.split(' ')
                   .map((e,i) => `${e} ${e.length}` )
   // console.log(word[0].length);
-console.log(word);
+// console.log(word);
 
-return JSON.stringify(word) 
+// return JSON.stringify(word) 
 
 }
-console.log(addLength("you will win"));
+// console.log(addLength("you will win"));
 //================================================================
+function pipeFix(numbers){
+  const a = numbers[0]
+  const b = numbers[numbers.length-1]
+  console.log('a:',a,'b:',b);
 
+  return Array(b - a + 1).fill(1).map((_, i) => a + i)
+}
+// console.log(pipeFix([2,3,5,6,8,9]));
 
+//================================================================
+function remainder(n, m){
+  let smallest = n < m
+                ? n
+                : m
+  console.log('smallest:',smallest);
+  if(smallest === 0 ) return NaN                
 
+  return n < m
+          ? m/n
+          : n/m
+//-----------------------------------------------------------------          
+//   return Math.max(a,b) % (Math.min(a,b) || NaN);          
+  
+}//  return a > b ? a % b : b % a;
+// console.log(remainder(72, 2));
+//================================================================
+function index(array, n){
+
+return array[n] ** n || -1
+}
+// console.log(index([1, 2, 3, 4],2));
+//================================================================
+//* Abbreviate a Two Word Name
+function abbrevName(name){
+
+const temp = name.split(' ')
+console.log(temp[0].charAt(0));
+
+return [temp[0].charAt(0),temp[1].charAt(0)]
+        .map(e => e.toUpperCase())
+        .join('.')
+}//return name.split(' ').map(i => i[0].toUpperCase()).join('.')
+console.log(abbrevName("patrick Feenan"));
+//================================================================
+//================================================================
+//================================================================
+//================================================================
+//================================================================
+//================================================================
 //================================================================
 //================================================================

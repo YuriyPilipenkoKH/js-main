@@ -627,6 +627,7 @@ const dg = numbers.split(' ').map(Number)
   const int = new SmallestIntegerFinder([34, 15, 88, 2])
   // console.log(int.small);
   //=========================================================
+  //! new Array
   function between(a, b) {
 
     

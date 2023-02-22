@@ -1,3 +1,15 @@
+// changing amount of colors on input
+const cardsAmount = document.querySelector('.amount')
+const inForm = document.createElement('input')
+inForm.classList.add('how__many')
+
+
+cardsAmount.append(inForm) 
+const num = inForm.value
+
+
+
+
 function getRandomHexColor() {
     return `${Math.floor(Math.random() * 16777215)
       .toString(16)
@@ -29,33 +41,42 @@ function hexToRgb(hex){
     const create = document.querySelector('.create-color');
     create.addEventListener('click',createObjectOfColors());
 
+// colors by input
 function createObjectOfColors(x){
    
-const item = {};
-let y = getRandomHexColor()
-item.hex = `#${y}`;
-item.rgb = `${hexToRgb(y)}`;
-// console.log(item);
-
-colors.push(item);
-
-return colors;
-}
-
-for (let i = 0; i < 150; i+=1) {
-    createObjectOfColors()
+    const item = {};
+    let y = getRandomHexColor()
+    item.hex = `#${y}`;
+    item.rgb = `${hexToRgb(y)}`;
+    // console.log(item);
     
-}
+    colors.push(item);
+    return colors;
+    }
+    
+    for (let i = 0; i < `${Number(num)}`; i+=1) {
+        createObjectOfColors()
+        
+    }
 
-console.log(colors); // array of colors
+
+
+// console.log(colors); // array of colors
 
 //===============colorpicker==================
 
 const paletteContainer = document.querySelector('.js-palette')
+
 const cardsMarkup = createColorCardsMarkup(colors)
 
 paletteContainer.insertAdjacentHTML('beforeend',cardsMarkup)
 paletteContainer.addEventListener('click',onPaletteContainerClick )
+
+
+
+
+
+
 
 // console.log(createColorCardsMarkup(colors))
 
@@ -75,19 +96,19 @@ function createColorCardsMarkup (colors) {
     </div> 
         `;
     });
-console.log(markup);
+// console.log(markup);
 
 return markup.join('');
 // creates markup
 }
 
+
+
+
 function onPaletteContainerClick(e) {
    if(!e.target.classList.contains('color-swatch'))  {
     return
    }
-
-
-
    const swatchEl = e.target;
    const parentColorCard = swatchEl.closest('.color-card') 
 
@@ -109,4 +130,8 @@ function removeActiveCardClass() {
 
 function addActiveCardClass (card) {
     card.classList.add('is-active')
+    
 }
+
+
+
