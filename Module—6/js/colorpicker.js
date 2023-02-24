@@ -5,7 +5,16 @@ inForm.classList.add('how__many')
 
 
 cardsAmount.append(inForm) 
-const num = inForm.value
+
+let q
+const ary =[]
+const num = inForm.addEventListener('input', function oninput  (e)  {
+    // console.log(e.target.value);
+     q = e.target.value
+     ary.push(q)
+    //  console.log(e);
+    return q
+})
 
 
 
@@ -41,6 +50,8 @@ function hexToRgb(hex){
     const create = document.querySelector('.create-color');
     create.addEventListener('click',createObjectOfColors());
 
+    console.log('q',ary);
+
 // colors by input
 function createObjectOfColors(x){
    
@@ -54,7 +65,8 @@ function createObjectOfColors(x){
     return colors;
     }
     
-    for (let i = 0; i < `${Number(num)}`; i+=1) {
+    
+    for (let i = 0; i < 12; i+=1) {   
         createObjectOfColors()
         
     }
