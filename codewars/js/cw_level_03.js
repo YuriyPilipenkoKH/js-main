@@ -364,11 +364,37 @@ return [temp[0].charAt(0),temp[1].charAt(0)]
         .map(e => e.toUpperCase())
         .join('.')
 }//return name.split(' ').map(i => i[0].toUpperCase()).join('.')
-console.log(abbrevName("patrick Feenan"));
+// console.log(abbrevName("patrick Feenan"));
 //================================================================
+function gimme (triplet) {
+
+const prom = triplet.sort((a,b) => a-b)
+console.log(prom);
+console.log(prom[1]);
+
+return prom[1]
+
+}//return [...triplet].indexOf(triplet.sort((a,b)=>a-b)[1])
+
+// console.log(gimme([2, 3, 1]));
 //================================================================
+var findAverage = function (nums) {
+
+return nums.reduce((a,b) => a+b) / (nums.length)
+
+}
+// console.log(findAverage([1, 3, 5, 7]));
 //================================================================
+function getEvenNumbers(numbersArray){
+
+return numbersArray.filter(e => e % 2 === 0)
+}
+// console.log(getEvenNumbers([1,2,3,6,8,10]));
+
 //================================================================
+
+
+
 //================================================================
 //================================================================
 //================================================================

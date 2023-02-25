@@ -7,7 +7,7 @@ const players = [
     {id: 'player-4', name: 'ajax', timePlayed: 150, points: 71, online: false,},
     {id: 'player-5', name: 'chelsey', timePlayed: 80, points: 48, online: true,},
   ];
-  // console.table(players)
+  console.table(players)
   
   const playersNames = players.map(player => {
     // console.log(player);
