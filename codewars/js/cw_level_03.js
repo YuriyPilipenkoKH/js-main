@@ -392,8 +392,15 @@ return numbersArray.filter(e => e % 2 === 0)
 // console.log(getEvenNumbers([1,2,3,6,8,10]));
 
 //================================================================
-
-
+//  5 kyu  Primes in numbers
+function primeFactors(n){
+  const nums = [...Array(25)].fill(1)//.map((e,i) => e = i+1)
+  const pows = nums.map((e,i) => e**i )
+ 
+  console.log(nums);
+  console.log(pows);
+}
+console.log(primeFactors(86240));
 
 //================================================================
 //================================================================
