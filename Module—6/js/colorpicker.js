@@ -50,7 +50,7 @@ function hexToRgb(hex){
     const create = document.querySelector('.create-color');
     create.addEventListener('click',createObjectOfColors());
 
-    console.log('q',ary);
+    // console.log('q',ary);
 
 // colors by input
 function createObjectOfColors(x){
@@ -63,7 +63,7 @@ function createObjectOfColors(x){
     
     colors.push(item);
     return colors;
-    }
+}
     
     
     for (let i = 0; i < 145; i+=1) {   
@@ -73,7 +73,7 @@ function createObjectOfColors(x){
 
 
 
-// console.log(colors); // array of colors
+console.log(colors); // array of colors
 
 //===============colorpicker==================
 
@@ -83,12 +83,6 @@ const cardsMarkup = createColorCardsMarkup(colors)
 
 paletteContainer.insertAdjacentHTML('beforeend',cardsMarkup)
 paletteContainer.addEventListener('click',onPaletteContainerClick )
-
-
-
-
-
-
 
 // console.log(createColorCardsMarkup(colors))
 
