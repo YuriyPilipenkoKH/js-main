@@ -451,7 +451,8 @@ function uniqueArray(a) {
 function doMath(s){
 
   return s.split(' ')
-          // .sort((a,b) => a.localeCompare(b))
+          .map(el => el.split('').sort((a,b) => b.localeCompare(a)).join('') )
+          .sort((a,b) => a.localeCompare(b))
   
 }
 console.log(doMath("24z6 1x23 y369 89a 900b"));
@@ -459,9 +460,20 @@ console.log(doMath("24z6 1x23 y369 89a 900b"));
 //================================================================
 function fstChar(st) {
 
-return st[1]
+const digits = Number(st.split('')
+                  .map((el) => el.replace(/\D/g, '')  )
+                  .join(''))
+
+const letter = (st.split('').sort((a,b) => b.localeCompare(a))).join('').charAt(0)               
+
+
+console.log('digits:',digits,'letter:',letter);
+
 }
+console.log(fstChar('24z6'));
 console.log(fstChar('1x23'));
+console.log(fstChar('y369'));
+console.log(fstChar('9000b'));
 
 //================================================================
 //================================================================

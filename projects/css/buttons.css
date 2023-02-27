@@ -93,18 +93,21 @@ body {
 .prod:hover,
 .prod:focus {
     border-color: #0A8817;
+     transition: all 0.4s;
 }
 
 .how:hover {
     color: #0A8817;
     border-color: transparent;
     background-color: transparent;
+    transition: all 0.4s;
 }
 
 .how:focus {
     color: #fff;
     border-color: transparent;
     background-color: transparent;
+    transition: all 0.4s;
 }
 
 
