@@ -1,5 +1,5 @@
 const arBtns = document.querySelectorAll('.arroww')
-console.log(arBtns);
+// console.log(arBtns);
 
 const toRightArrow = `
 <div class="arrow-wrap">
@@ -10,3 +10,17 @@ const toRightArrow = `
 arBtns.forEach(el => {
     el.insertAdjacentHTML('beforeend', toRightArrow)
 });
+
+//=================Add Arrows & Classes===========================
+
+const allBtns = document.querySelectorAll('.wrapper > button')
+console.log(allBtns);
+
+// allBtns.forEach(el => {
+//     if(el.innerText === "Submit" || el.innerText === 'Open map') {
+//         el.insertAdjacentHTML('beforeend', toRightArrow)
+//         el.classList.add('arrow')
+//     }
+
+
+// })// innerText: "Submit"

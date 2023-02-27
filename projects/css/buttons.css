@@ -110,4 +110,25 @@ body {
     transition: all 0.4s;
 }
 
+.js-btn:disabled {
+    background-color: #ABABAB;
+    color: #757575;
+    border-color: #ABABAB;
+    cursor: none;
+}
+
+.fra:disabled,
+.prod:disabled {
+    background-color: transparent;
+}
+
+.how:disabled {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.js-btn:disabled > div > svg,
+.js-btn:disabled:hover > svg {
+    fill:#757575;
+}
 

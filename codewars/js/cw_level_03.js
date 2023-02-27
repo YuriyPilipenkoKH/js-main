@@ -450,12 +450,44 @@ function uniqueArray(a) {
 //================================================================
 function doMath(s){
 
-  return s.split(' ')
-          .map(el => el.split('').sort((a,b) => b.localeCompare(a)).join('') )
-          .sort((a,b) => a.localeCompare(b))
+  const prom =  s.split(' ')
+  const digits = prom.map( e =>Number(e.split('')
+                  .map((el) => el.replace(/\D/g, '')  )
+                  .join('')))
   
+
+  const letter = prom.map(e => (e.split('').sort((a,b) => b.localeCompare(a))).join('').charAt(0)   )
+
+  console.log('digits:',digits,'letter:',letter);
+ 
+  return s.split(' ')
+          .map((el,id) => [letter[id], digits[id]])
+//--------------------------------------------------------
+// return s.split(' ').map((w, i) => ({
+//   c: w.replace(/\d/g, ''),
+//   d: +w.replace(/\D/g, ''),
+//   i
+// }))
+// .sort((a, b) => a.c.localeCompare(b.c) || a.i - b.i)
+// .map(({ d }) => d);
+//---------------------------------------------------------
+// const sign = ['+','-','*','/']; 
+// const tmp = s.split` `.sort((a,b) => a.replace(/\d/g,'').localeCompare( b.replace(/\d/g,'') ) || s.indexOf(a)-s.indexOf(b)).map((v,i) => v.replace(/[a-z]/g, '') );
+// let res = tmp[0];
+// for(let i = 1; i<tmp.length; i++)
+//    res = eval(res + sign[(i-1)%sign.length] + tmp[i]);
+//  return Math.round(res)
+//------------------------------------------------------------
+// var m = ['+','-','*','/'], exp = ''
+// s = s.split(' ')
+//      .map((e,i) => [+e.replace(/\D/,''),e.replace(/\d/g,'').charCodeAt(),i])
+//      .sort((a,b) => a[1]-b[1] || a[2]-b[2])
+//      .forEach((e,i) => exp += e[0]+m[i%4])
+// var r = exp.slice(0,-1).replace(/[+\-*/]/g,')$&')
+// return Math.round(eval('('.repeat((r.match(/\)/g) || []).length) + r))
+
 }
-console.log(doMath("24z6 1x23 y369 89a 900b"));
+// console.log(doMath("24z6 1x23 y369 89a 900b"));
 // console.log(doMath("Basic tests added"));
 //================================================================
 function fstChar(st) {
@@ -468,14 +500,23 @@ const letter = (st.split('').sort((a,b) => b.localeCompare(a))).join('').charAt(
 
 
 console.log('digits:',digits,'letter:',letter);
+// return {l: letter,d: digits}
+return [letter, digits]
+
 
 }
-console.log(fstChar('24z6'));
-console.log(fstChar('1x23'));
-console.log(fstChar('y369'));
-console.log(fstChar('9000b'));
+// console.log(fstChar('24z6'));
+// console.log(fstChar('1x23'));
+// console.log(fstChar('y369'));
+// console.log(fstChar('9000b'));
 
 //================================================================
+function wave(str){
+ 
+  
+
+}
+console.log(wave('two words'));
 //================================================================
 //================================================================
 //================================================================
