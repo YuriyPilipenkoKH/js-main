@@ -322,6 +322,7 @@ function addLength(str) {
 }
 // console.log(addLength("you will win"));
 //================================================================
+//* from a to b
 function pipeFix(numbers){
   const a = numbers[0]
   const b = numbers[numbers.length-1]
@@ -392,15 +393,39 @@ return numbersArray.filter(e => e % 2 === 0)
 // console.log(getEvenNumbers([1,2,3,6,8,10]));
 
 //================================================================
-//  5 kyu  Primes in numbers
+//*  5 kyu  Primes in numbers
+
 function primeFactors(n){
-  const nums = [...Array(25)].fill(1)//.map((e,i) => e = i+1)
-  const pows = nums.map((e,i) => e**i )
+let a = 2
+let z = 19
+
+ const arr1 = Array(z - a + 1).fill(1).map((_, i) => a + i)
+ const arr2 = Array(z - a + 1).fill(1).map((_, i) => (a + i)**2)
+ const arr3 = Array(9 - a + 1).fill(1).map((_, i) => (a + i)**3)
+ const arr4 = Array(5 - a + 1).fill(1).map((_, i) => (a + i)**4)
+ const arr5 = Array(4 - a + 1).fill(1).map((_, i) => (a + i)**5)
+ const arr6 = Array(3 - a + 1).fill(1).map((_, i) => (a + i)**6)
+ const arr7 = Array(2 - a + 1).fill(1).map((_, i) => (a + i)**7)
+ const arr8 = Array(2 - a + 1).fill(1).map((_, i) => (a + i)**8)
+ const arr9 = Array(2 - a + 1).fill(1).map((_, i) => (a + i)**9)
+
+ const all = [...arr1,...arr2,...arr3,...arr4,...arr5,...arr6,...arr7,...arr8,...arr9].filter((el,id,ary) => ary.indexOf(el) == id)
+
+//  console.log('arr1:',arr1);
+//  console.log('arr2:',arr2);
+//  console.log('arr3:',arr3);
+//  console.log('arr4:',arr4);
+//  console.log('arr5:',arr5);
+//  console.log('arr6:',arr6);
+//  console.log('arr7:',arr7);
+//  console.log('arr8:',arr8);
+//  console.log('arr9:',arr9);
+ console.log('all:',all);
+
+
  
-  console.log(nums);
-  console.log(pows);
 }
-console.log(primeFactors(86240));
+// console.log(primeFactors(86240));
 
 //================================================================
 //*Метод padStart()дополняет текущую строку другой строкой (при необходимости несколько раз), пока результирующая строка не достигнет заданной длины.
@@ -413,6 +438,36 @@ function getRandomHexColor() {
    }
 // console.log(getRandomHexColor());
 
+//================================================================
+//*  Remove duplicate values from JS array [duplicate]
+
+function uniqueArray(a) {
+
+  return a.filter((el, idx,arr) => arr.indexOf(el) == idx) 
+
+}
+// console.log(uniqueArray([2,4,4,4,7,6,,5,5]));
+//================================================================
+function doMath(s){
+
+  return s.split(' ')
+          // .sort((a,b) => a.localeCompare(b))
+  
+}
+console.log(doMath("24z6 1x23 y369 89a 900b"));
+// console.log(doMath("Basic tests added"));
+//================================================================
+function fstChar(st) {
+
+return st[1]
+}
+console.log(fstChar('1x23'));
+
+//================================================================
+//================================================================
+//================================================================
+//================================================================
+//================================================================
 //================================================================
 //================================================================
 //================================================================

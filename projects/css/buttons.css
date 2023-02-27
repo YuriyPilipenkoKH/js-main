@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Seymour+One&display=swap');
+body {
+    background-color: #AEC6A5;
+}
+
+.js-btn {
+    
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    background-color: #f8d24e;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    color: #000000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.arrow-wrap {
+    width: 24px;
+    height: 24px;
+}
+
+.buy {
+    width: 152px;
+    height: 42px;
+}
+
+.read {
+    width: 164px;
+    height: 42px;
+}
+
+.loc,.fra {
+    width: 196px;
+    height: 42px;
+}
+
+.fra,
+.prod {
+    background-color: transparent;
+    border-color: #f8d24e;
+}
+
+.prod {
+   width: 134px;
+    height: 42px;
+} 
+
+.how {
+    width: 154px;
+    height: 42px;
+    padding: 12px;
+    color: #f8d24e;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.sub {
+    width: 121px;
+    height: 42px;
+}
+
+.open {
+    width: 145px;
+    height: 42px;
+}
+
+
+.js-btn:hover,
+.js-btn:focus,
+.js-btn:hover  ~ svg,
+.js-btn:focus ~  svg {
+    outline: none;
+    background-color: #0A8817;
+    color: antiquewhite;
+
+    fill: antiquewhite;
+    transition: all 0.4s;
+
+}
+
+.fra:hover,
+.fra:focus,
+.prod:hover,
+.prod:focus {
+    border-color: #0A8817;
+}
+
+.how:hover {
+    color: #0A8817;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.how:focus {
+    color: #fff;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+
