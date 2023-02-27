@@ -11,16 +11,69 @@ arBtns.forEach(el => {
     el.insertAdjacentHTML('beforeend', toRightArrow)
 });
 
-//=================Add Arrows & Classes===========================
+// ====================Animation===============================
+
+const btnContainer = `
+<span class="btn-container"></span>
+`
 
 const allBtns = document.querySelectorAll('.wrapper > button')
 console.log(allBtns);
 
-// allBtns.forEach(el => {
-//     if(el.innerText === "Submit" || el.innerText === 'Open map') {
-//         el.insertAdjacentHTML('beforeend', toRightArrow)
-//         el.classList.add('arrow')
-//     }
+allBtns.forEach(el => {
 
+    if(el.innerText !== "How it’s made?") {
+        el.insertAdjacentHTML('afterbegin', btnContainer)
+        // el.classList.add('arrow')
+    }
 
-// })// innerText: "Submit"
+})// innerText: "Submit"
+
+const allContainers  = document.querySelectorAll('.btn-container')
+console.log(allContainers);
+
+const container = document.querySelector('.btn-container')
+console.log(container);
+
+// function buttonAnimation () {
+
+    
+// }
+
+// buttonAnimation()
+
+function deleteCircleIcon(circle) {
+    circle.remove()
+}
+
+function   createCircleIcon(posX,posY)  {
+
+    const circle = document.createElement('div')
+    circle.classList.add('circle')
+
+    circle.style.left = `${posX}px`
+    circle.style.top = `${posY}px`
+    
+    container.appendChild(circle)
+
+    setTimeout(() => {
+        deleteCircleIcon(circle)
+    },1000)
+}
+
+function handleButtonClick(ev) {
+    // console.log(ev);
+    const offset = ev.target.getBoundingClientRect()
+    // console.log(offset);  
+
+    const posX = ev.pageX - offset.left
+    const posY = ev.pageY - offset.top
+
+    createCircleIcon(posX,posY)
+}
+
+const bodyTag = document.getElementsByTagName('body')
+const buyBtn = document.querySelector('.buy')
+// console.log(buyBtn);
+
+buyBtn.addEventListener('mousedown',handleButtonClick)
