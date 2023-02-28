@@ -18,7 +18,7 @@ const btnContainer = `
 `
 
 const allBtns = document.querySelectorAll('.wrapper > button')
-console.log(allBtns);
+// console.log(allBtns);
 
 allBtns.forEach(el => {
 
@@ -30,10 +30,10 @@ allBtns.forEach(el => {
 })// innerText: "Submit"
 
 const allContainers  = document.querySelectorAll('.btn-container')
-console.log(allContainers);
+// console.log(allContainers);
 
 const container = document.querySelector('.btn-container')
-console.log(container);
+// console.log(container);
 
 // function buttonAnimation () {
 
@@ -64,7 +64,7 @@ function   createCircleIcon(posX,posY)  {
 function handleButtonClick(ev) {
     // console.log(ev);
     const offset = ev.target.getBoundingClientRect()
-    // console.log(offset);  
+    console.log(offset);  
 
     const posX = ev.pageX - offset.left
     const posY = ev.pageY - offset.top

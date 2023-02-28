@@ -513,7 +513,21 @@ return [letter, digits]
 //================================================================
 function wave(str){
  
-  
+  return str.split('')
+            .map(function(e,i,arr)  {
+              console.log('e:',e,'i:',i);
+              if(e[i] === arr[i]) {
+              return   e.toUpperCase()
+              } else { return e}
+            }).join('')
+//-----------------------------------------------------------
+// return Array(str.length).fill(str).map((v,i,arr)=>
+// v.slice(0,i).toLowerCase()+v.slice(i,i+1).toUpperCase()+v.slice(i+1).toLowerCase())
+// .filter(v=>v!=v.toLowerCase())
+//---------------------------------------------
+//return [...w].map((a,i)=>w.slice(0,i)+a.toUpperCase()+w.slice(i+1)).filter(a=>a!=w)
+//-----------------------------------------------------------
+//  const wave = s => Array.from( s, (_,i) => /\s/.test(s[i]) ? null : s.slice(0,i) + s[i].toUpperCase() + s.slice(i+1) ).filter(Boolean) ;
 
 }
 console.log(wave('two words'));
