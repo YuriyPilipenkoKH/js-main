@@ -29,6 +29,10 @@ allBtns.forEach(el => {
 
 })// innerText: "Submit"
 
+allBtns.forEach(el => {
+    // el.setAttribute("disabled", "")
+})
+
 const allContainers  = document.querySelectorAll('.btn-container')
 // console.log(allContainers);
 
