@@ -47,8 +47,9 @@ body {
 
 .fra,
 .prod {
+    border: 3px solid #f8d24e;
     background-color: transparent;
-    border-color: #f8d24e;
+    /* border-color: #f8d24e; */
 }
 
 .prod {
