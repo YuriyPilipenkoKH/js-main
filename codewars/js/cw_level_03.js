@@ -524,14 +524,46 @@ function wave(str){
 // return Array(str.length).fill(str).map((v,i,arr)=>
 // v.slice(0,i).toLowerCase()+v.slice(i,i+1).toUpperCase()+v.slice(i+1).toLowerCase())
 // .filter(v=>v!=v.toLowerCase())
-//---------------------------------------------
+//-------------------------------------------------------------
 //return [...w].map((a,i)=>w.slice(0,i)+a.toUpperCase()+w.slice(i+1)).filter(a=>a!=w)
 //-----------------------------------------------------------
 //  const wave = s => Array.from( s, (_,i) => /\s/.test(s[i]) ? null : s.slice(0,i) + s[i].toUpperCase() + s.slice(i+1) ).filter(Boolean) ;
 
 }
-console.log(wave('two words'));
+// console.log(wave('two words'));
 //================================================================
+function sumUpNoAdjacents(a,n) {
+  const evn = []
+  const odd = []
+
+  a.forEach((el,id) => {
+    if(id % 2 === 0) {
+      evn.push(el)
+    } else { odd.push(el)}
+  });
+
+  const first = evn.map((el,id,arr) => {
+    // console.log('el',el, 'sum:', el + arr[id+1]);
+    if(el + arr[id+1] === n) {return true }
+    else {return false}
+  }).some(el => el)
+
+  const second = odd.map((el,id,arr) => {
+    console.log('el',el, 'sum:', el + arr[id+1]);
+    if(el + arr[id+1] === n) {return true }
+    else {return false}
+  }).some(el => el)
+
+  console.log('evn:', evn, 'odd:', odd);
+  console.log('first:', first, 'second:', second);
+  
+
+  return first || second
+
+
+}
+// console.log(sumUpNoAdjacents([2,5,10,4,3,15,8,6,14,9],12));
+// console.log(sumUpNoAdjacents([],12));
 //================================================================
 //================================================================
 //================================================================
