@@ -1,5 +1,26 @@
-const arBtns = document.querySelectorAll('.arroww')
-// console.log(arBtns);
+
+const refs = {
+
+    arBtns: document.querySelectorAll('.arroww'),
+    allContainers: document.querySelectorAll('.btn-container'),
+    container: document.querySelector('.btn-container'),
+    main: document.querySelector('.main'),
+   
+}
+
+const btns = {
+  
+    all: document.querySelectorAll('.js-btn'),
+
+    buy: document.querySelector('.buy'),
+    read: document.querySelector('.read'),
+    loc: document.querySelector('.loc'),
+    fra: document.querySelector('.fra'),
+    prod: document.querySelector('.prod'),
+    sub: document.querySelector('.sub'),
+    open: document.querySelector('.open'),
+}
+
 
 const toRightArrow = `
 <div class="arrow-wrap">
@@ -7,7 +28,7 @@ const toRightArrow = `
 </div>
 `;
 
-arBtns.forEach(el => {
+refs.arBtns.forEach(el => {
     el.insertAdjacentHTML('beforeend', toRightArrow)
 });
 
@@ -17,40 +38,52 @@ const btnContainer = `
 <span class="btn-container"></span>
 `
 
-const allBtns = document.querySelectorAll('.wrapper > button')
+// const allBtns = document.querySelectorAll('.wrapper > button')
 // console.log(allBtns);
 
-allBtns.forEach(el => {
+
+// ID to spans
+btns.all.forEach((el,idx,arr) => {
+    const span = el.getElementsByTagName('span')
+    // console.log(span);
 
     if(el.innerText !== "How it’s made?") {
         el.insertAdjacentHTML('afterbegin', btnContainer)
-        // el.classList.add('arrow')
+        span[0].setAttribute('id', `0${idx + 1}`)
     }
 
 })// innerText: "Submit"
 
-allBtns.forEach(el => {
+btns.all.forEach(el => {
     // el.setAttribute("disabled", "")
 })
 
-const allContainers  = document.querySelectorAll('.btn-container')
-// console.log(allContainers);
 
-const container = document.querySelector('.btn-container')
-// console.log(container);
+// buyBtn.addEventListener('mousedown',handleButtonClick)
 
-// function buttonAnimation () {
+ refs.main.addEventListener('mousedown',handleButtonClick)
 
+
+
+function handleButtonClick(ev) {
+    // console.log(ev.target.className);
+    console.log(ev.target.id);
+
+    if(ev.target.className !== 'btn-container') {
+return
+    } 
+
+        const offset = ev.target.getBoundingClientRect()
+        // console.log(offset);  
     
-// }
-
-// buttonAnimation()
-
-function deleteCircleIcon(circle) {
-    circle.remove()
+        const posX = ev.pageX - offset.left
+        const posY = ev.pageY - offset.top
+    
+        createCircleIcon(posX,posY,ev.target)
 }
 
-function   createCircleIcon(posX,posY)  {
+
+function   createCircleIcon(posX,posY,target)  {
 
     const circle = document.createElement('div')
     circle.classList.add('circle')
@@ -58,26 +91,13 @@ function   createCircleIcon(posX,posY)  {
     circle.style.left = `${posX}px`
     circle.style.top = `${posY}px`
     
-    container.appendChild(circle)
+    target.appendChild(circle)
 
     setTimeout(() => {
         deleteCircleIcon(circle)
     },1000)
 }
 
-function handleButtonClick(ev) {
-    // console.log(ev);
-    const offset = ev.target.getBoundingClientRect()
-    console.log(offset);  
-
-    const posX = ev.pageX - offset.left
-    const posY = ev.pageY - offset.top
-
-    createCircleIcon(posX,posY)
+function deleteCircleIcon(circle) {
+    circle.remove()
 }
-
-const bodyTag = document.getElementsByTagName('body')
-const buyBtn = document.querySelector('.buy')
-// console.log(buyBtn);
-
-buyBtn.addEventListener('mousedown',handleButtonClick)

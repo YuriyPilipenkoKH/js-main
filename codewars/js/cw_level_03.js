@@ -565,6 +565,33 @@ function sumUpNoAdjacents(a,n) {
 // console.log(sumUpNoAdjacents([2,5,10,4,3,15,8,6,14,9],12));
 // console.log(sumUpNoAdjacents([],12));
 //================================================================
+function incrementString (strng) {
+
+
+const word = strng.split('')
+                  .map((el) => el.replace(/\d/g, '') )
+                  .join('')
+
+const num = strng.split('')
+                  .map((el) => el.replace(/\D/g, '') )
+                  .join('')
+                  .split('')
+                 
+const dig =  (Number(num.join(''))+1).toString().split('')
+
+const fin = [...dig]//.fill(0)
+              
+
+console.log('word:', word, 'num:', num);
+console.log('dig:', dig);
+console.log('fin:', fin);
+// console.log(num.length );
+return word + num  
+  
+}
+console.log(incrementString('foobar0029'));
+
+
 //================================================================
 //================================================================
 //================================================================
