@@ -67,7 +67,7 @@ btns.all.forEach(el => {
 
 function handleButtonClick(ev) {
     // console.log(ev.target.className);
-    console.log(ev.target.id);
+    // console.log(ev.target.id);
 
     if(ev.target.className !== 'btn-container') {
 return
