@@ -245,7 +245,8 @@ function findUniqs(arr) {
 
   }
 //   console.log(findUniqs([ 1, 1, 1, 2, 1, 1 ]));
-//   console.log(findUniqs([ 4, 4, 'foo', 4 ]));
+  console.log(findUniqs([ 4, 4, 'foo', 4 ]));
+
 // console.log(findUniqs([ 'Aa', 'aaa', 'aaaaa', 'BbBb', 'Aaaa', 'AaAaAa', 'a' ]));
 //===========================================
 
@@ -495,21 +496,19 @@ function arPowTwo(n) {
   return temp.map((el,id) => [id,el])
 
 }
-console.log(arPowTwo(32));
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(arPowTwo(32));
  //=========================================== 
+ function objectKeys(st) {
+    
+  const k = Object.keys(st)
+  const v = Object.values(st)
+  const e = Object.entries(st)
+  console.log('k:',k,'v:',v);
+
+  return e
+}
+// console.log(objectKeys('object'));
+
  //=========================================== 
  //=========================================== 
  //=========================================== 

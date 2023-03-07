@@ -1,21 +1,39 @@
 // changing amount of colors on input
-const cardsAmount = document.querySelector('.amount')
-const inForm = document.createElement('input')
-inForm.classList.add('how__many')
 
 
-cardsAmount.append(inForm) 
+const refs = {
+    paletteContainer: document.querySelector('.js-palette'),
+    cardsAmount: document.querySelector('.amount'),
+    form: document.querySelector('.js-form')
 
-let q
-const ary =[]
-const num = inForm.addEventListener('input', function oninput  (e)  {
-    // console.log(e.target.value);
-     q = e.target.value
-     ary.push(q)
-    //  console.log(e);
-    return q
-})
+}
 
+refs.form.addEventListener('submit', onUpdate)
+
+function onUpdate(e) {
+    e.preventDefault()
+
+    const colorsAmount = e.currentTarget.elements.amount.value
+
+    renderCards(colorsAmount)
+    refs.form.reset()
+}
+
+
+// const inForm = document.createElement('input')
+// inForm.classList.add('how__many')
+
+// refs.cardsAmount.append(inForm) 
+
+// let q
+// const ary =[]
+// const num = inForm.addEventListener('input', function oninput  (e)  {
+//     // console.log(e.target.value);
+//      q = e.target.value
+//      ary.push(q)
+//     //  console.log(e);
+//     return q
+// })
 
 
 
@@ -64,25 +82,32 @@ function createObjectOfColors(x){
     colors.push(item);
     return colors;
 }
+
+// console.log(colorsAmount);
     
-    
-    for (let i = 0; i < 145; i+=1) {   
-        createObjectOfColors()
-        
+   function renderCards(amount) {
+        // for (let i = 0; i < amount; i+=1) {      
+        //     createObjectOfColors()
+        // }
+
+       return [...Array(amount)].map(createObjectOfColors)
+     
     }
+//    renderCards(14)
 
-
-
+    
 console.log(colors); // array of colors
+
+
 
 //===============colorpicker==================
 
-const paletteContainer = document.querySelector('.js-palette')
+
 
 const cardsMarkup = createColorCardsMarkup(colors)
 
-paletteContainer.insertAdjacentHTML('beforeend',cardsMarkup)
-paletteContainer.addEventListener('click',onPaletteContainerClick )
+refs.paletteContainer.insertAdjacentHTML('beforeend',cardsMarkup)
+refs.paletteContainer.addEventListener('click',onPaletteContainerClick )
 
 // console.log(createColorCardsMarkup(colors))
 

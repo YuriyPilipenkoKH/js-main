@@ -151,8 +151,9 @@ function getGrade (s1, s2, s3) {
         
     default:  return '—'
         break;
-  }  }
-//   console.log(getGrade(77,112,100));
+  } 
+ }
+  console.log(getGrade(77,112,100));
 
 //=====================================
 // returns string n times

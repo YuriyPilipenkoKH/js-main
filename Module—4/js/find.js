@@ -32,6 +32,6 @@ const playerNameToFind = 'kiwi'
 
 
 const findPlayerByName  = (onePlayer) => {
-    onePlayer.find(pla => pla.name === playerNameToFind);
+   return onePlayer.find(pla => pla.name === playerNameToFind);
 };
 console.log(findPlayerByName(players));
