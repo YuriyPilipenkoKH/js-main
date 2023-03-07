@@ -357,6 +357,8 @@ return array[n] ** n || -1
 //================================================================
 //* Abbreviate a Two Word Name
 function abbrevName(name){
+  console.log(name.__proto__);
+  console.log(name);
 
 const temp = name.split(' ')
 console.log(temp[0].charAt(0));
@@ -378,6 +380,7 @@ return prom[1]
 }//return [...triplet].indexOf(triplet.sort((a,b)=>a-b)[1])
 
 // console.log(gimme([2, 3, 1]));
+console.log(gimme.prototype.constructor);
 //================================================================
 var findAverage = function (nums) {
 
@@ -558,7 +561,7 @@ function sumUpNoAdjacents(a,n) {
   console.log('first:', first, 'second:', second);
   
 
-  return first || second
+  return (first || second)//.__proto__
 
 
 }
@@ -586,7 +589,7 @@ console.log('word:', word, 'num:', num);
 console.log('dig:', dig);
 console.log('fin:', fin);
 // console.log(num.length );
-return word + num  
+return (num ).__proto__
   
 }
 // console.log(incrementString('foobar0029'));
