@@ -33,10 +33,14 @@
     display: block;
   }
 
-  .n {
+
+
+  .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1320px;
+    margin: 0 auto;
   }
 
   .logo {
@@ -80,9 +84,9 @@
 
   .main {
     display: flex;
-    
+    justify-content: center;
     gap: 100px;
-    background: url(../img/gym/bg__svg.svg) no-repeat;
+    background: url(../img/gym/bg__svg.svg) no-repeat center;
     
   }
 
@@ -168,6 +172,7 @@
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 4px #000000;
     width: 535px;
+    cursor: pointer;
 }  
 
 .f {
