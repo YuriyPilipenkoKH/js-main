@@ -380,7 +380,7 @@ return prom[1]
 }//return [...triplet].indexOf(triplet.sort((a,b)=>a-b)[1])
 
 // console.log(gimme([2, 3, 1]));
-console.log(gimme.prototype.constructor);
+// console.log(gimme.prototype.constructor);
 //================================================================
 var findAverage = function (nums) {
 
@@ -627,10 +627,43 @@ function likes(names) {
 // console.log(likes(["Alex", "Jacob", "Mark", "Max"] ));
 //================================================================
 function squareArea(A){
-  
+  return (A*4/(2*Math.PI))**2
 
 }
-console.log(squareArea(314));
+// console.log(squareArea(1.57));
 //================================================================
+
+class Samurai {
+  constructor(name) {
+    this.name = name
+  }
+  hello() {
+    alert(this.name)
+  }
+}
+// console.log(Samurai.prototype) ;
+// console.log(Samurai.prototype  === Object.prototype) ;
+// console.log(Samurai.prototype === Function.prototype) ;
+// console.log(Samurai.__proto__ === Function.prototype);
+
+let shogun = new Samurai('Dim')
+
+// console.log(shogun.prototype);
+// console.log(shogun.__proto__);
+// console.log(shogun.__proto__  === Samurai.prototype);
+
+let shogun2 = new Samurai('Vik')
+
+// console.log(shogun.__proto__ === shogun2.__proto__);
+
+const compronent = () => {return 2}
+// console.log(compronent.prototype);
+// console.log(compronent.__proto__ ===  Function.prototype);
+
+const age = 21
+// console.log(age.__proto__);
+// console.log(age.toString(16));
 //================================================================
+
+
 //================================================================
