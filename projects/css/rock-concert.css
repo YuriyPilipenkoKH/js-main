@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Rubik Mono One', sans-serif;
+    font-family: 'Staatliches', cursive;
+    margin: 0;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    color: #212121;
+    line-height: 1.5;
+
+
+    display: grid;
+    grid-template-areas: 
+    "m h h h"
+    "m . . ."
+    "m f f f" ;
+
+    background: no-repeat center center fixed url(../img/rock/rock_1.jpg);
+    -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+  }
+
+ 
+
+  h1, h2, h3, h4, h5, h6, p, ul {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  
+  .btn {
+    position: relative;
+  }
+  
+  img {
+    display: block;
+  }
+
+
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+
+  .h {
+    grid-area: h;
+    padding-left: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 140px;
+ 
+  }
+
+  .m {
+    background: crimson;
+    grid-area: m;
+    padding: 50px 40px 50px 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+
+    background: linear-gradient(to bottom, #000f26, #002f63 );
+    background-image:  url();
+  }
+
+  .f {
+    grid-area: f;
+
+  }
+
+  .h__list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .h__link,
+  .h__btn {
+    font-family: "Momserat", sans-serif;
+    font-size: 24px;
+    line-height: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .h__btn {
+    display: inline-flex;
+    background: transparent;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer;
+    width: 215px;
+    height: 42px;
+    border-radius: 21px;
+  }
+
+  .m__wrapper-top {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .m__title {
+
+    font-family: 'Rubik Mono One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 111px;
+    
+    color: #FFFFFF;
+  }
+
+  .m__undertitle {
+    font-family: 'Rubik Mono One';
+    font-size: 50px;
+    line-height: 62px;  
+    color: #FFFFFF;
+
+
+  }
+
+  .m__text {
+
+    font-family: "Momserat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    
+    color: #FFFFFF;
+  }
+
+  .m__date {
+
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 150px;
+    color: #FFFFFF;
+  }
+
+  .m__day {
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 75px;
+    color: #FFFFFF;
+  }
+
+  .m__place {
+    font-family: "Momserat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    color: #FFFFFF;
+  }
