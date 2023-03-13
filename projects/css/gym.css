@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Alfa Slab One', cursive;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* background-color: #fafafa; */
+    color: #212121;
+    line-height: 1.5;
+    padding: 20px 60px;
+
+    background: center  repeat url(../img/gym/black-stacked-stones\ \ .jpg) ;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+
+  h1, h2, h3, h4, h5, h6, p, ul {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .btn {
+    position: relative;
+  }
+  
+  img {
+    display: block;
+  }
+
+  .n {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    fill: #fff;
+
+  }
+
+  .logo:hover {
+    fill: #FBCA01;
+  }
+
+  .n__list {
+    display: flex;
+    gap: 50px;
+
+
+  }
+  
+  .n__list-item > a  {
+    font-family: Alfa Slab One;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+  }
+
+  .n__log-btn {
+    font-family: 'Alfa Slab One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 25px;
+    background: transparent;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer;
+   
+
+  }
+
+  .main {
+    display: flex;
+    
+    gap: 100px;
+    background: url(../img/gym/bg__svg.svg) no-repeat;
+    
+  }
+
+
+  .s-1 {
+    padding: 0 0 36px 110px;
+  }
+
+  .s-1__title {
+    display: inline-block;
+    font-family: 'Alfa Slab One';
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 170px;
+    line-height: 220px;
+    padding: 45px 40px;
+    background: #FBCA01;
+    color: #000000;
+  }
+
+  .s-1__undertitle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+   
+  }
+
+  .s-1__cta-w, 
+  .s-1__cta-y {
+   
+    display: flex;
+    font-size: 70px;
+    line-height: 100px;
+    text-align: center;
+    color: #FFFFFF;    
+  }
+
+  .s-1__cta-y {
+    color: #FBCA01;
+    gap: 70px;
+  }
+
+  .s-1__list {
+   
+    max-width: 530px;
+    padding: 20px 0;
+
+    display: grid;
+   
+    grid-template-columns: 3fr 2fr ;
+    column-gap: 9px;
+    row-gap: 25px;
+  }
+
+  .s-1__list-item {
+    display: flex;
+    gap:15px;
+    align-items: center;
+
+    font-size: 24px;
+    line-height: 25px;
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+.s-1__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 100px;
+    
+
+    background: #FBCA01;    
+    font-family: 'Alfa Slab One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 80px;
+    color: rgba(251, 202, 1, 0.9);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 4px #000000;
+    width: 535px;
+}  
+
+.f {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+  
