@@ -630,7 +630,7 @@ function squareArea(A){
   return (A*4/(2*Math.PI))**2
 
 }
-// console.log(squareArea(1.57));
+// console.log(squareArea(1.57)); 
 //================================================================
 
 class Samurai {
@@ -664,6 +664,57 @@ const age = 21
 // console.log(age.__proto__);
 // console.log(age.toString(16));
 //================================================================
+function isUnique(str) {
+
+// const ar = str.split('')
+// const obj = ar.reduce((acc, it) => (acc[it] = acc[it] + 1 || 1, acc), {})   
+// // console.log(ar.length); 
+// // console.log(obj);
+// // console.log(Object.values(obj).length);
+
+// return ar.length === Object.values(obj).length
+//---------------------------------------------------------------
+
+const set  = new Set()
+for (let i = 0; i < str.length; i++) {
+ let char = str[i]
+  // console.log(char);
+
+  if(set.has(char) ) {
+    return false
+  }
+  set.add(char)
+  // console.log(set);
+}
 
 
+return true
+
+}
+// console.log(isUnique('Ampersand'));
+//================================================================
+function flatten (ara) {
+
+return ara.flat(5)
+
+}
+// console.log(flatten([[1],[[[3,7]]],[2,8,5]]));
+//================================================================
+function removeDups ( str) {
+
+const set = new Set(str)
+console.log(Object.values(set));
+
+const map = new Map()
+console.log(map);
+
+return Array.from(set)
+}
+console.log(removeDups('Array of life'));
+ 
+
+//================================================================
+//================================================================
+//================================================================
+//================================================================
 //================================================================
