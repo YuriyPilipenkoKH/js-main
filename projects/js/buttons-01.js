@@ -20,7 +20,15 @@ const btns = {
     sub: document.querySelector('.sub'),
     open: document.querySelector('.open'),
 }
+console.log(btns.buy);
+console.log(refs.main);
 
+
+refs.main.addEventListener('scroll', function() {
+    console.log('buy:.scrollTop', btns.buy.scrollTop,'.clientHeight', btns.buy.clientHeight,'.scrollHeight',btns.buy.scrollHeight);
+    console.log('read:.scrollTop', btns.read.scrollTop,'.c lientHeight', btns.read.clientHeight,'scrollHeight',btns.read.scrollHeight);
+    console.log('loc:.scrollTop', btns.loc.scrollTop,'.c lientHeight', btns.loc.clientHeight,'scrollHeight',btns.loc.scrollHeight);
+})
 
 const toRightArrow = `
 <div class="arrow-wrap">
