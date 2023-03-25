@@ -135,6 +135,14 @@ font-weight: 600;
   padding: 25px;
 }
 
+.js-picker-form {
+  padding: 10px;
+ display: flex;
+ gap: 4px;
+ justify-content: center;
+
+}
+
 .how-many {
   width: 60px;
   border: 3px solid #72dad7;
