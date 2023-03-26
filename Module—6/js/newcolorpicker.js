@@ -10,6 +10,8 @@ const refs = {
 }
 let amount = 0 
 
+console.log(refs.notifier);
+
 refs.form.addEventListener('submit', onSearchForm);
 refs.palette.addEventListener('click', onCardClick)
 
@@ -38,12 +40,13 @@ function onCardClick(e) {
    
    const h = swatchEl.dataset.hex
    const r = swatchEl.dataset.rgb
+   console.log(h);
 
     removeActiveCardClass();
     addActiveCardClass(parentColorCard )
-    setBodyColor(swatchEl.dataset.hex);
+    setBodyColor(h);
     notifyBodyColor(h,r) 
-
+    refs.notifier.style.color = h
 }
 
 
