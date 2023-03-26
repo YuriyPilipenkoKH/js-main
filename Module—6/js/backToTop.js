@@ -1,7 +1,10 @@
+import { icon_up } from "./markup.js";
 export {scrollFunction,topFunction}
 
 const mybutton = document.querySelector('.back-to-top');
 mybutton.addEventListener('click', topFunction);
+
+mybutton.innerHTML = icon_up
 
 window.onscroll = function () {
   scrollFunction();
