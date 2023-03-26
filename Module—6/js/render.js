@@ -1,7 +1,8 @@
-export { renderGallery };
+export { renderGallery,notifyBodyColor };
 
 
 const gallery = document.querySelector('.palette');
+const notifier = document.querySelector('.notifier');
 
 function renderGallery(cards) {
 
@@ -17,7 +18,7 @@ function renderGallery(cards) {
         ></div>
         <div class="color-meta">
             <p>ID: ${idx+1}</p>
-            <p>HEX: ${hex}</p>
+            <p>HEX: #${hex}</p>
             <p>RGB: ${rgb}</p>
         </div>
     </div> 
@@ -28,4 +29,19 @@ function renderGallery(cards) {
     gallery.innerHTML = markup
   }
 
-// renderGallery(cards)
+  function notifyBodyColor(hex,rgb) {
+    notifier.innerHTML = `
+    <p class="notify__hex">HEX: ${hex}</p>
+    <p class="notify__rgb">RGB: (${rgb})</p>
+                        `
+  }
+
+//   function notifyBodyColor(hex,rgb) {
+//     notifier.innerHTML = `
+//         <p class = "notify">
+//           HEX: ${hex}
+//           RGB: ${rgb}
+//         </p>
+//                         `
+//   }
+  

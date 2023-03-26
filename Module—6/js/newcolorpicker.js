@@ -1,4 +1,4 @@
-import { renderGallery } from './render.js';
+import { renderGallery , notifyBodyColor} from './render.js';
 import {generator} from  './hex_gen.js'
 
 const refs = {
@@ -6,6 +6,7 @@ const refs = {
     inputField: document.querySelector('.how-many'),
     buttonSubmit: document.querySelector('.btn-go'),
     palette: document.querySelector('.js-palette'),
+    notifier: document.querySelector('.notifier'),
 }
 let amount = 0 
 
@@ -24,18 +25,25 @@ function onSearchForm(e) {
 console.log(cards);
 }
 
+
+// by Repeta
 function onCardClick(e) {
     e.preventDefault();
     if(!e.target.classList.contains('color-swatch')){
         return
     }
-    console.log(e.target);
+    // console.log(e.target);
     const swatchEl = e.target;
-   const parentColorCard = swatchEl.closest('.color-card') 
+   const parentColorCard = swatchEl.closest('.color-card')
+   
+   const h = swatchEl.dataset.hex
+   const r = swatchEl.dataset.rgb
 
     removeActiveCardClass();
     addActiveCardClass(parentColorCard )
     setBodyColor(swatchEl.dataset.hex);
+    notifyBodyColor(h,r) 
+
 }
 
 
@@ -54,6 +62,7 @@ function addActiveCardClass (card) {
     card.classList.add('is-active')
     
 }
+//-------------------
 
 
 
