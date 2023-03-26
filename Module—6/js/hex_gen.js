@@ -32,7 +32,7 @@ function getValues() {
 
 
 function generator (amount) {
-console.log(amount);
+// console.log(amount);
 
 const cards = [...Array(amount)]
       .map(el =>{ 

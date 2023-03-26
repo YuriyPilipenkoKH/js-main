@@ -1,5 +1,6 @@
 import { renderGallery , notifyBodyColor} from './render.js';
 import {generator} from  './hex_gen.js'
+import './backToTop.js';
 
 const refs = {
     form: document.querySelector('.js-picker-form'),
@@ -10,15 +11,20 @@ const refs = {
 }
 let amount = 0 
 
-console.log(refs.notifier);
-
 refs.form.addEventListener('submit', onSearchForm);
 refs.palette.addEventListener('click', onCardClick)
 
 
 function onSearchForm(e) {
     e.preventDefault();
-    amount = Number(e.currentTarget.amount.value.trim());
+    let input = e.currentTarget.amount.value.trim()
+    amount = Number(input);
+
+    if(!input.match(/^\d+/))
+    {
+    alert("Please only enter numeric characters  (Allowed input:0-9)")
+    return
+    }
 
     const cards =  generator(amount)
     renderGallery(cards)
@@ -40,7 +46,7 @@ function onCardClick(e) {
    
    const h = swatchEl.dataset.hex
    const r = swatchEl.dataset.rgb
-   console.log(h);
+//    console.log(h);
 
     removeActiveCardClass();
     addActiveCardClass(parentColorCard )
