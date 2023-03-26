@@ -1,21 +1,22 @@
 export { renderGallery };
-import { cards } from "./hex.js";
+
 
 const gallery = document.querySelector('.palette');
 
 function renderGallery(cards) {
 
     const markup = cards
-      .map(card => {
+      .map((card,idx) => {
         const { hex, rgb } = card;
         return `
         <div class="color-card">
         <div class="color-swatch"
-            data-hex="${hex}";
+            data-hex="#${hex}";
             data-rgb="${rgb}";
             style = " background-color: #${hex};"
         ></div>
         <div class="color-meta">
+            <p>ID: ${idx+1}</p>
             <p>HEX: ${hex}</p>
             <p>RGB: ${rgb}</p>
         </div>
@@ -24,7 +25,7 @@ function renderGallery(cards) {
       })
       .join('');
   
-    gallery.insertAdjacentHTML('beforeend', markup);
+    gallery.innerHTML = markup
   }
 
-renderGallery(cards)
+// renderGallery(cards)
