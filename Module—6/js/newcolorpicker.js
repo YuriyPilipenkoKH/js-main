@@ -24,6 +24,9 @@ function onSearchForm(e) {
     {
     alert("Please only enter numeric characters  (Allowed input:0-9)")
     return
+    } else if (amount > 2000) {
+    alert("Please choose less amount of cards  (Allowed input:0-2000)")
+    return
     }
 
     const cards =  generator(amount)
