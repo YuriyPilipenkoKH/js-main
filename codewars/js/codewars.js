@@ -126,7 +126,7 @@ function lovefunc(flower1, flower2){
 function getGrade (s1, s2, s3) {
  
   let score = Math.round((s1+s2+s3)/3)
-  console.log(score);
+  // console.log(score);
 
   switch (true) {
         case (90 <= score && score <= 100):
@@ -153,7 +153,7 @@ function getGrade (s1, s2, s3) {
         break;
   } 
  }
-  console.log(getGrade(77,112,100));
+  // console.log(getGrade(77,112,100));
 
 //=====================================
 // returns string n times
@@ -413,10 +413,10 @@ const binaryArrayToNumber = arr => {
 
 function findShort(s){
 const tod = s.split(' ').map((str, index) => ({ value: str, id: index + 1 }));
-console.log(tod[0].value);
+// console.log(tod[0].value);
 
 const shortestWord = s.split(' ').reduce((a, b) => a.length <= b.length ? a : b)
-return shortestWord.length
+return [shortestWord.length, shortestWord]
 
 // return Math.min.apply(null, s.split(' ').map(w => w.length));
 // return Math.min(...s.split(" ").map (s => s.length));
