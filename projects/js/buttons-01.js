@@ -48,10 +48,11 @@ const btnContainer = `
 
 // const allBtns = document.querySelectorAll('.wrapper > button')
 // console.log(allBtns);
+// console.log([...btns.all]);
 
-
+const all = [...btns.all]
 // ID to spans
-btns.all.forEach((el,idx,arr) => {
+all.map((el,idx,arr) => {
     const span = el.getElementsByTagName('span')
     // console.log(span);
 
@@ -62,7 +63,7 @@ btns.all.forEach((el,idx,arr) => {
 
 })// innerText: "Submit"
 
-btns.all.forEach(el => {
+all.map(el => {
     // el.setAttribute("disabled", "")
 })
 
