@@ -718,17 +718,26 @@ function titleToNumber(title) {
 
 const alphabet = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z'
 const alpha = [...(alphabet.replace(/ /g,""))]
-console.log(alpha);
+// console.log(alpha);
 
 const input = [...title].reverse()
 // console.log(input[0]);
 
 const idx = alpha.indexOf(input[0], 0)+ 1
-console.log(idx); 
+console.log('idx',idx); 
 
-return input
+const res = []
+input.forEach(el => {
+  let id = alpha.indexOf(el, 0)+ 1
+  res.push(id)
+});
+console.log(res);
+
+return res.reduce((acc,el,i) => (acc+el))
+
 }
-console.log(titleToNumber('AS'));
+console.log(titleToNumber('AZ'));
+console.log(titleToNumber('CODEWARS'));
 //================================================================
 //================================================================
 //================================================================
