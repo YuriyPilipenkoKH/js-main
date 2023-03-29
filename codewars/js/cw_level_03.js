@@ -710,10 +710,25 @@ console.log(map);
 
 return Array.from(set)
 }
-console.log(removeDups('Array of life'));
+// console.log(removeDups('Array of life'));
  
 
 //================================================================
+function titleToNumber(title) {
+
+const alphabet = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z'
+const alpha = [...(alphabet.replace(/ /g,""))]
+console.log(alpha);
+
+const input = [...title].reverse()
+// console.log(input[0]);
+
+const idx = alpha.indexOf(input[0], 0)+ 1
+console.log(idx); 
+
+return input
+}
+console.log(titleToNumber('AS'));
 //================================================================
 //================================================================
 //================================================================
