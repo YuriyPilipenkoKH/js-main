@@ -736,8 +736,8 @@ console.log(res);
 return res.reduce((acc,el,i) => (acc+el))
 
 }
-console.log(titleToNumber('AZ'));
-console.log(titleToNumber('CODEWARS'));
+console.log(titleToNumber('AA'));
+// console.log(titleToNumber('CODEWARS'));
 //================================================================
 //================================================================
 //================================================================
