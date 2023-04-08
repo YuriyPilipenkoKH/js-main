@@ -17,7 +17,7 @@
     display: grid;
     grid-template-areas: 
     "m h h h"
-    "m . . ."
+    "m . . ." 
     "m f f f" ;
 
     background: no-repeat center center fixed url(../img/rock/rock_1.jpg);
