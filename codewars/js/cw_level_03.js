@@ -95,18 +95,18 @@ function mergeArrays(arr1, arr2) {
   }
 //   console.log(mergeArrays([1, 3, 5, 7, 9], [10, 8, 6, 4, 2]));
 //================================================================
-//!   Remove duplicate values from JS array 
+//!   Remove duplicate values from JS array / Unique
 function minValue(values){
 
-    const res = values.sort((a,b) => a-b)
-                .filter((el,id,ar) => ar.indexOf(el) === id)
-                .join('')
-      return Number(res) 
+    // const res = values.sort((a,b) => a-b)
+    //             .filter((el,id,ar) => ar.indexOf(el) === id)
+    //             .join('')
+    //   return Number(res) 
       //----------------------------------------
-//    return   +[...new Set(values)].sort().join``
+   return   [...new Set(values)].sort()//.join``
   }
 
-// console.log(minValue([5, 7, 9, 5, 7]));
+console.log(minValue([5, 7, 9, 5, 7]));
 //================================================================
 function getAge(inputString){
  
@@ -434,7 +434,7 @@ let z = 19
 //*Метод padStart()дополняет текущую строку другой строкой (при необходимости несколько раз), пока результирующая строка не достигнет заданной длины.
 
 function getRandomHexColor() {
-  return `${Math.floor(Math.random() * 16777215)
+  return findindex `${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)
    }`;
@@ -446,10 +446,11 @@ function getRandomHexColor() {
 
 function uniqueArray(a) {
 
-  return a.filter((el, idx,arr) => arr.indexOf(el) == idx) 
+  return a.filter((el, idx,arr) => arr.indexOf(el) === idx) 
 
 }
-// console.log(uniqueArray([2,4,4,4,7,6,,5,5]));
+console.log(uniqueArray([2,4,4,4,7,6,,5,5]));
+console.log(uniqueArray(['cat','dog','cat']));
 //================================================================
 function doMath(s){
 
@@ -736,7 +737,7 @@ console.log(res);
 return res.reduce((acc,el,i) => (acc+el))
 
 }
-console.log(titleToNumber('AA'));
+// console.log(titleToNumber('AA'));
 // console.log(titleToNumber('CODEWARS'));
 //================================================================
 //================================================================
