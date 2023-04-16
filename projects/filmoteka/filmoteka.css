@@ -127,11 +127,11 @@ img {
        border-radius: 15px;
   }
 
-    @media screen and (min-width: 1280px) {
+    /* @media screen and (min-width: 1280px) {
     background: url(./img/background-desk.jpg);
        width: 704px;
        height: 222px;
        padding: 16px;  
        border-radius: 10px;
-  }
+  } */
 }
