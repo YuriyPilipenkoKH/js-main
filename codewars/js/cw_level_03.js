@@ -106,7 +106,7 @@ function minValue(values){
    return   [...new Set(values)].sort()//.join``
   }
 
-console.log(minValue([5, 7, 9, 5, 7]));
+// console.log(minValue([5, 7, 9, 5, 7]));
 //================================================================
 function getAge(inputString){
  
@@ -449,8 +449,8 @@ function uniqueArray(a) {
   return a.filter((el, idx,arr) => arr.indexOf(el) === idx) 
 
 }
-console.log(uniqueArray([2,4,4,4,7,6,,5,5]));
-console.log(uniqueArray(['cat','dog','cat']));
+// console.log(uniqueArray([2,4,4,4,7,6,,5,5]));
+// console.log(uniqueArray(['cat','dog','cat']));
 //================================================================
 function doMath(s){
 
@@ -732,7 +732,7 @@ input.forEach(el => {
   let id = alpha.indexOf(el, 0)+ 1
   res.push(id)
 });
-console.log(res);
+
 
 return res.reduce((acc,el,i) => (acc+el))
 
@@ -740,6 +740,35 @@ return res.reduce((acc,el,i) => (acc+el))
 // console.log(titleToNumber('AA'));
 // console.log(titleToNumber('CODEWARS'));
 //================================================================
+
+const  first = [ 1 ,  2 ,  3 ,  4 ];
+const  second = [ 3 ,  4 ,  5 ,  6 ];
+
+function  intersection  ( a, b )  {
+ return a.filter((el) => b.includes(el))
+
+}
+
+console.log(intersection(first, second))  // -> [3, 4]
 //================================================================
+const inData =  "user.name.firstname=Bob&user.name.lastname=Smith&user.favoritecolor=Light%20Blue" ;
+
+
+function  queryObjectify (arg)  {
+// ??
+}
+
+queryObjectify(inData)
+/* Результатом выполнения для входной строки должен быть следующий объект
+{
+  'user' : {
+     'name' : {
+       'firstname' :  'Bob' ,
+       'lastname' :  'Smith'
+    },
+    'favoritecolor' :  'Light Blue'
+  }
+};
+*/
 //================================================================
 //================================================================
