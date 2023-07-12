@@ -755,7 +755,17 @@ const inData =  "user.name.firstname=Bob&user.name.lastname=Smith&user.favoritec
 
 
 function  queryObjectify (arg)  {
-// ??
+
+  const result  = arg.replace(/&user\.name\./g, '')
+              .split('.')
+              .filter(el => el.includes('='))
+              .reduce((result, item) => {
+                const [key, value] = item.split('=');
+                result[key] = value;
+                return result;
+              }, {});
+              // .reduce((acc, it) => (acc[it] = acc[it] + 1 || 1, acc), {})  
+  console.log(result);
 }
 
 queryObjectify(inData)
