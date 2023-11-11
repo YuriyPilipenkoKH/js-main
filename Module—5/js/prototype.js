@@ -44,4 +44,4 @@ tommy.name = 'Tommy'
 tommy.age = 28
 console.log( tommy.sayMyName())
 console.log(tommy.showMyAge())
-console.log(tommy)
+console.log(tommy) 
