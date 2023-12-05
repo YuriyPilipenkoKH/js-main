@@ -749,7 +749,7 @@ function  intersection  ( a, b )  {
 
 }
 
-console.log(intersection(first, second))  // -> [3, 4]
+// console.log(intersection(first, second))  // -> [3, 4]
 //================================================================
 const inData =  "user.name.firstname=Bob&user.name.lastname=Smith&user.favoritecolor=Light%20Blue" ;
 
@@ -765,7 +765,7 @@ function  queryObjectify (arg)  {
                 return result;
               }, {});
               // .reduce((acc, it) => (acc[it] = acc[it] + 1 || 1, acc), {})  
-  console.log(result);
+  // console.log(result);
 }
 
 queryObjectify(inData)
@@ -780,5 +780,21 @@ queryObjectify(inData)
   }
 };
 */
+//================================================================
+function larPair(ara) {
+  const temp = ara.sort((a, b) => b-a)
+  return temp[0]+temp[1]
+
+  // const largestPairSum = numbers => numbers.sort((a, b) => b - a).slice(0, 2).reduce((a, b) => a + b);
+
+  //const largestPairSum = a => a.sort((x, y) => y - x)[0] + a[1];
+}
+
+// console.log(larPair([10, 14, 2, 23, 19]))
+// console.log(larPair([99, 2, 2, 23, 19]))
+
+//================================================================
+//================================================================
+//================================================================
 //================================================================
 //================================================================
