@@ -3,6 +3,7 @@ body {
     padding: 16px;
     margin: 0;
     box-sizing: border-box;
+    background-color: #7777;
 }
 .wrapper {
     list-style: none;
