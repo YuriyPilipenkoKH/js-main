@@ -790,7 +790,7 @@ function larPair(ara) {
   //const largestPairSum = a => a.sort((x, y) => y - x)[0] + a[1];
 }
 
-// console.log(larPair([10, 14, 2, 23, 19]))
+console.log(larPair([10, 14, 2, 23, 19]))
 // console.log(larPair([99, 2, 2, 23, 19]))
 
 //================================================================
